@@ -1,8 +1,33 @@
 import { chromium } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import fs from "node:fs/promises";
-const browser = await chromium.launch({ channel: "chrome", headless: true });
+const browser = await chromium.launch({
+  channel: process.env.TEST_BROWSER || "chrome",
+  headless: true,
+});
 const base = process.env.TEST_URL || "http://127.0.0.1:4322";
+const isolatedTransport = process.env.TEST_ISOLATE_TRANSPORT === "true";
+// Optional functional QA transport: Node retrieves the exact deployed responses
+// when browser network middleware injects unrelated scripts. Not a timing test.
+const responses = new Map();
+const isolate = async (context) => {
+  if (!isolatedTransport) return;
+  await context.route(`${new URL(base).origin}/**`, async (route) => {
+    const url = route.request().url();
+    if (!responses.has(url)) {
+      const response = await fetch(url);
+      const headers = Object.fromEntries(response.headers);
+      delete headers["content-encoding"];
+      delete headers["content-length"];
+      responses.set(url, {
+        status: response.status,
+        headers,
+        body: Buffer.from(await response.arrayBuffer()),
+      });
+    }
+    await route.fulfill(responses.get(url));
+  });
+};
 const results = [];
 await fs.mkdir("artifacts", { recursive: true });
 for (const width of [320, 390, 768, 1440]) {
@@ -20,6 +45,7 @@ for (const width of [320, 390, 768, 1440]) {
       hasTouch: width < 768,
     });
     const page = await context.newPage();
+    await isolate(context);
     const errors = [];
     page.on("pageerror", (error) => errors.push(error.message));
     const response = await page.goto(`${base}${pathname}`, {
@@ -63,12 +89,12 @@ for (const width of [320, 390, 768, 1440]) {
     console.log(`${width} ${pathname}: ${JSON.stringify(results.at(-1))}`);
     await fs.writeFile(
       "artifacts/browser-report.json",
-      JSON.stringify({ results }, null, 2),
+      JSON.stringify({ base, isolatedTransport, results }, null, 2),
     );
     if (["/", "/es/"].includes(pathname) && [390, 1440].includes(width)) {
       await page.locator("#selected-work").scrollIntoViewIfNeeded();
       await page.locator("#palm-wellness").scrollIntoViewIfNeeded();
-      await page.locator(".hero").scrollIntoViewIfNeeded();
+      await page.evaluate(() => window.scrollTo(0, 0));
       await page.screenshot({
         path: `artifacts/home-${pathname === "/" ? "en" : "es"}-${width}.png`,
         fullPage: true,
@@ -84,6 +110,7 @@ const context = await browser.newContext({
   viewport: { width: 1440, height: 1000 },
 });
 const page = await context.newPage();
+await isolate(context);
 await page.goto(`${base}/`);
 const controls = page.locator(".preview-controls").first();
 await controls.getByRole("button", { name: /Play preview/ }).click();
@@ -111,6 +138,7 @@ const nojs = await browser.newContext({
   viewport: { width: 390, height: 844 },
 });
 const nojsPage = await nojs.newPage();
+await isolate(nojs);
 await nojsPage.goto(`${base}/es/`);
 await nojsPage.getByText("Menú", { exact: true }).click();
 const noJsMenu = await nojsPage.locator(".mobile-menu nav").isVisible();
@@ -125,7 +153,7 @@ const interactions = {
 };
 await fs.writeFile(
   "artifacts/browser-report.json",
-  JSON.stringify({ results, interactions }, null, 2),
+  JSON.stringify({ base, isolatedTransport, results, interactions }, null, 2),
 );
 const failed = results.filter(
   (r) =>

@@ -16,6 +16,8 @@ node scripts/browser-check.mjs
 
 `npm run validate` checks Astro/TypeScript, builds all 22 paired routes plus 404, checks local links and reports compressed assets. `scripts/browser-check.mjs` tests the production build on port 4322, unless `TEST_URL` points to another origin.
 
+Browser QA uses installed Chrome by default (`TEST_BROWSER` can select another Playwright channel). If browser network middleware injects unrelated code, `TEST_ISOLATE_TRANSPORT=true` retrieves exact origin responses with Node and supplies them to the browser for functional/layout checks. The report records this mode; it is not a network or performance measurement. It does not change the user's browser or security settings.
+
 ## Preview and deployment
 
 Vercel is the temporary preview host in the owner's account. Final hosting will be the company's Cloudflare account after approval. `vercel.json` adds a noindex header to every response; page metadata also defaults to noindex. This Vercel configuration is deliberately preview-only, and must not be copied unchanged into the final deployment.

@@ -1,12 +1,19 @@
 # True Webmaster — hand-off para continuar el SDD
 
-**Estado al 29 de septiembre de 2026:** Fases 01–04 completas y aprobadas. La ronda acotada de Pencil (brand board + Home en inglés para desktop) también está aprobada como dirección visual. El próximo paso es **redactar y aprobar la Fase 05: especificación de Astro y contenido bilingüe**. Aún no se ha creado código Astro.
+**Estado al 29 de septiembre de 2026:** Fases 01–05 completas y aprobadas. El propietario autorizó implementar el primer preview bilingüe de Astro. Ya existen 22 rutas EN/ES y una página 404. La dirección aprobada de Pencil se conserva. Consultar `docs/implementation-status.md` para las decisiones posteriores y las dependencias de release.
+
+- Preview temporal: https://truewebmaster-website.vercel.app/ y https://truewebmaster-website.vercel.app/es/.
+- Repositorio privado: https://github.com/ramon-zerpa/truewebmaster-website.
+- Vercel en la cuenta personal para revisión; Cloudflare de la empresa solo tras aprobación final. El dominio legacy sigue sin cambios.
+- Contacto y calendario de HighLevel todavía no existen: interfaz preparada, sin envío ni reservas simuladas.
+- Permiso de clientes para publicar nombres y capturas confirmado. Palm enlaza al dominio final por instrucción del propietario, aunque el nuevo sitio todavía no está allí.
+- Consultas abiertas: la lista de espera legacy no se conserva.
 
 ## 1. Cómo retomar en un chat nuevo
 
 Trabajar en `C:\Users\raymo\Downloads\truewebmaster-website`. Leer `AGENTS.md`, después las fases 01, 02, 03 y 04 en orden, este archivo y las dos notas de `pencil-design/`. Inspeccionar el lienzo mediante Pencil MCP y las previsualizaciones actuales antes de proponer cambios visuales. No reabrir decisiones ya aprobadas sin una petición del propietario. Respetar las correcciones posteriores cuando un documento anterior describa una hipótesis superada.
 
-**Encargo inicial recomendado para el nuevo chat:** elaborar la Fase 05 en un documento Markdown dentro del proyecto. Debe ser una especificación revisable, no código ni archivos Astro. Presentar decisiones pendientes y dependencias reales sin inventar servicios, resultados, permisos o procesos de venta. Detenerse tras la Fase 05 para revisión del propietario; después vendrá la implementación.
+**Encargo vigente para el nuevo chat:** leer también la Fase 05 aprobada y `docs/implementation-status.md`, revisar el preview y continuar con las correcciones del propietario. Resolver contenido e integración comercial pendientes antes del release. Las secciones siguientes conservan el briefing original de Pencil; el estado vigente y las correcciones posteriores de este encabezado prevalecen.
 
 ## 2. Dirección de negocio que gobierna el proyecto
 
