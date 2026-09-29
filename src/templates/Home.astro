@@ -4,6 +4,7 @@ import { href, text, type Locale } from "../lib/routes";
 import { primaryCta } from "../lib/content";
 import Arrow from "../components/Arrow.astro";
 import HeroFlow from "../components/HeroFlow.astro";
+import HeroHeadline from "../components/HeroHeadline.astro";
 import Journey from "../components/Journey.astro";
 import SolutionsList from "../components/SolutionsList.astro";
 import ProcessList from "../components/ProcessList.astro";
@@ -93,19 +94,18 @@ const pillars = [
             "Operaciones digitales administradas / Tampa, FL",
           )}
         </p>
-        <h1>
-          {text(
+        <HeroHeadline
+          first={text(
             locale,
             "Your business has enough tools.",
             "Tu negocio ya tiene suficientes herramientas.",
-          )}{" "}
-          <br />
-          {text(
+          )}
+          second={text(
             locale,
             "What it needs is one system.",
             "Lo que necesita es un sistema conectado.",
           )}
-        </h1>
+        />
         <p class="hero-support">
           {text(
             locale,
