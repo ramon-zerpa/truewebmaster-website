@@ -1,0 +1,53 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Page not found — True Webmaster</title>
+  </head>
+  <body class="error-page">
+    <main>
+      <img
+        src="/images/true-webmaster-logo.webp"
+        width="180"
+        height="68"
+        alt="True Webmaster"
+      />
+      <p>404</p>
+      <h1 data-error-title>That page could not be found.</h1>
+      <p data-error-body>Return to the homepage or start a conversation.</p>
+      <div class="hero-actions">
+        <a class="button" data-error-home href="/">
+          Home
+        </a>
+        <a class="button button-outline" data-error-contact href="/contact/">
+          Contact
+        </a>
+      </div>
+    </main>
+    <script>
+      if (location.pathname.startsWith("/es/")) {
+        document.documentElement.lang = "es";
+        document.title = "Página no encontrada — True Webmaster";
+        document.querySelector("[data-error-title]")!.textContent =
+          "No encontramos esa página.";
+        document.querySelector("[data-error-body]")!.textContent =
+          "Vuelve al inicio o inicia una conversación.";
+        const home =
+          document.querySelector<HTMLAnchorElement>("[data-error-home]")!;
+        home.href = "/es/";
+        home.textContent = "Inicio";
+        const contact = document.querySelector<HTMLAnchorElement>(
+          "[data-error-contact]",
+        )!;
+        contact.href = "/es/contacto/";
+        contact.textContent = "Contacto";
+      }
+    </script>
+  </body>
+</html>

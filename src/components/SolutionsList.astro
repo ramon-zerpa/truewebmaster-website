@@ -1,0 +1,33 @@
+---
+import { solutions, local } from "../lib/content";
+import { href, type Locale } from "../lib/routes";
+import Arrow from "./Arrow.astro";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+---
+
+<ol class="editorial-list solution-list">
+  {solutions.map((item, i) => (
+    <li id={item.id}>
+      <span class="row-number">{String(i + 1).padStart(2, "0")}</span>
+      <div>
+        <h3>
+          <a
+            href={
+              item.page === "solutions"
+                ? `${href("solutions", locale)}#retention`
+                : href(item.page, locale)
+            }
+          >
+            {local(item.title, locale)}
+          </a>
+        </h3>
+        <p>{local(item.summary, locale)}</p>
+      </div>
+      <span class="row-detail">{local(item.detail, locale)}</span>
+      <Arrow />
+    </li>
+  ))}
+</ol>

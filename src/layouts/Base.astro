@@ -1,0 +1,239 @@
+---
+import "../styles/global.css";
+import {
+  href,
+  navigation,
+  labels,
+  text,
+  type Locale,
+  type PageId,
+} from "../lib/routes";
+import { primaryCta } from "../lib/content";
+import Arrow from "../components/Arrow.astro";
+interface Props {
+  locale: Locale;
+  page: PageId;
+  title: string;
+  description: string;
+  noindex?: boolean;
+}
+const { locale, page, title, description, noindex = false } = Astro.props;
+const release = import.meta.env.PUBLIC_RELEASE_READY === "true";
+const site = Astro.site;
+const canonical = site ? new URL(href(page, locale), site).href : undefined;
+const navLabel = text(locale, "Main navigation", "Navegación principal");
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111A27" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {(!release || noindex) && (
+      <meta name="robots" content="noindex, nofollow" />
+    )}
+    {canonical && <link rel="canonical" href={canonical} />}
+    {site && !noindex && (
+      <>
+        <link
+          rel="alternate"
+          hreflang="en"
+          href={new URL(href(page, "en"), site).href}
+        />
+        <link
+          rel="alternate"
+          hreflang="es"
+          href={new URL(href(page, "es"), site).href}
+        />
+        <link
+          rel="alternate"
+          hreflang="x-default"
+          href={new URL(href(page, "en"), site).href}
+        />
+      </>
+    )}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={locale === "en" ? "en_US" : "es_US"} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <link
+      rel="preload"
+      href="/fonts/outfit-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="icon"
+      href="/images/true-webmaster-logo.webp"
+      type="image/webp"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      {text(locale, "Skip to content", "Ir al contenido")}
+    </a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href={href("home", locale)}
+          aria-label={text(
+            locale,
+            "True Webmaster home",
+            "True Webmaster inicio",
+          )}
+        >
+          <img
+            src="/images/true-webmaster-logo.webp"
+            width="289"
+            height="67"
+            alt="True Webmaster"
+            fetchpriority="high"
+          />
+        </a>
+        <nav class="desktop-nav" aria-label={navLabel}>
+          {navigation.map((id) => (
+            <a
+              href={href(id, locale)}
+              aria-current={page === id ? "page" : undefined}
+            >
+              {labels[id][locale]}
+            </a>
+          ))}
+        </nav>
+        <nav
+          class="language-switch"
+          aria-label={text(locale, "Language", "Idioma")}
+        >
+          <a
+            href={href(page, "en")}
+            lang="en"
+            aria-current={locale === "en" ? "page" : undefined}
+          >
+            English
+          </a>
+          <span aria-hidden="true">/</span>
+          <a
+            href={href(page, "es")}
+            lang="es"
+            aria-current={locale === "es" ? "page" : undefined}
+          >
+            Español
+          </a>
+        </nav>
+        <a class="button header-cta" href={href("contact", locale)}>
+          {primaryCta(locale)}
+          <Arrow />
+        </a>
+        <details class="mobile-menu">
+          <summary>
+            {text(locale, "Menu", "Menú")}
+            <span class="menu-lines" aria-hidden="true"></span>
+          </summary>
+          <nav aria-label={navLabel}>
+            {navigation.map((id) => (
+              <a
+                href={href(id, locale)}
+                aria-current={page === id ? "page" : undefined}
+              >
+                {labels[id][locale]}
+              </a>
+            ))}
+            <a href={href("contact", locale)}>
+              {primaryCta(locale)}
+              <Arrow />
+            </a>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href={href("home", locale)}>
+            <img
+              src="/images/true-webmaster-logo.webp"
+              alt="True Webmaster"
+              width="289"
+              height="67"
+              loading="lazy"
+            />
+          </a>
+          <p>
+            {text(
+              locale,
+              "Managed digital operations for service businesses.",
+              "Operaciones digitales administradas para negocios de servicios.",
+            )}
+          </p>
+        </div>
+        <nav aria-label={text(locale, "Explore", "Explora")}>
+          {navigation.map((id) => (
+            <a href={href(id, locale)}>{labels[id][locale]}</a>
+          ))}
+          <a href={href("contact", locale)}>{labels.contact[locale]}</a>
+        </nav>
+        <nav aria-label={text(locale, "Capabilities", "Capacidades")}>
+          {(["websites", "automation", "crm"] as const).map((id) => (
+            <a href={href(id, locale)}>{labels[id][locale]}</a>
+          ))}
+          <a href={href("privacy", locale)}>{labels.privacy[locale]}</a>
+        </nav>
+        <div>
+          <p>Tampa, FL</p>
+          <p>{text(locale, "English + Spanish", "Inglés + español")}</p>
+          <a class="text-link" href={href("contact", locale)}>
+            {text(locale, "Start a conversation", "Inicia una conversación")}
+            <Arrow />
+          </a>
+        </div>
+      </div>
+    </footer>
+    {!release && (
+      <aside
+        class="preview-notice"
+        aria-label={text(locale, "Preview notice", "Aviso de vista previa")}
+      >
+        {text(
+          locale,
+          "Design preview · Contact and booking will be connected before launch.",
+          "Vista previa de diseño · Contacto y reservas se conectarán antes del lanzamiento.",
+        )}
+      </aside>
+    )}
+    <script>
+      document
+        .querySelectorAll<HTMLDetailsElement>(".mobile-menu")
+        .forEach((menu) => {
+          document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && menu.open) {
+              menu.open = false;
+              menu.querySelector("summary")?.focus();
+            }
+          });
+          document.addEventListener("click", (event) => {
+            if (event.target instanceof Node && !menu.contains(event.target))
+              menu.open = false;
+          });
+        });
+      document
+        .querySelectorAll<HTMLAnchorElement>(".language-switch a")
+        .forEach((link) => {
+          const hash = location.hash;
+          if (
+            hash &&
+            document.getElementById(decodeURIComponent(hash.slice(1)))
+          )
+            link.hash = hash;
+        });
+    </script>
+  </body>
+</html>

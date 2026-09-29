@@ -1,0 +1,9 @@
+.git/
+node_modules/
+.astro/
+dist/
+artifacts/
+pencil-design/
+docs/
+*.md
+.env*

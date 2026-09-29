@@ -1,0 +1,241 @@
+---
+import { text, href, type Locale } from "../lib/routes";
+import Arrow from "./Arrow.astro";
+interface Props {
+  locale: Locale;
+  standalone?: boolean;
+}
+const { locale, standalone = false } = Astro.props;
+const projects = [
+  {
+    id: "affordable-roofing",
+    name: "Affordable Roofing Systems",
+    domain: "affordableroofingflorida.com",
+    url: "https://www.affordableroofingflorida.com/",
+    category: text(locale, "Roofing services", "Servicios de techado"),
+    description: text(
+      locale,
+      "Clear paths from urgent repairs to roofing services and estimate requests.",
+      "Un recorrido claro desde reparaciones urgentes hasta servicios de techado y solicitudes de presupuesto.",
+    ),
+  },
+  {
+    id: "palm-wellness",
+    name: "Palm Wellness Center",
+    domain: "palmwellness.center",
+    url: "https://www.palmwellness.center/",
+    category: text(
+      locale,
+      "Primary care & physical rehabilitation",
+      "Atención primaria y rehabilitación física",
+    ),
+    description: text(
+      locale,
+      "Primary care and physical rehabilitation brought together in one clear experience.",
+      "Atención primaria y rehabilitación física reunidas en una experiencia clara.",
+    ),
+  },
+];
+---
+
+<section
+  class="section showcase"
+  id="selected-work"
+  aria-label={text(locale, "Selected work", "Proyectos seleccionados")}
+>
+  <div class="container">
+    {standalone && (
+      <h2 class="sr-only">
+        {text(
+          locale,
+          "Selected client websites",
+          "Sitios de clientes seleccionados",
+        )}
+      </h2>
+    )}
+    {!standalone && (
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">
+            {text(locale, "Selected work", "Proyectos seleccionados")}
+          </p>
+          <h2>
+            {text(
+              locale,
+              "Real businesses. Specific work. Clear context.",
+              "Negocios reales. Trabajo concreto. Contexto claro.",
+            )}
+          </h2>
+        </div>
+        <a class="text-link" href={href("work", locale)}>
+          {text(locale, "View selected work", "Ver proyectos seleccionados")}
+          <Arrow />
+        </a>
+      </div>
+    )}
+    <div class="projects">
+      {projects.map((p, i) => (
+        <article
+          class:list={["project", { "project-reverse": i === 1 }]}
+          id={p.id}
+        >
+          <div class="project-copy">
+            <p class="eyebrow">{p.category}</p>
+            <h3 translate="no">{p.name}</h3>
+            <p>{p.description}</p>
+            <a class="text-link" href={p.url}>
+              {text(locale, "Visit the website", "Visita el sitio web")}
+              <Arrow />
+            </a>
+          </div>
+          <div class="project-preview" data-project-preview>
+            <div class="browser-bar">
+              <div class="browser-dots" aria-hidden="true">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+              <span translate="no">{p.domain}</span>
+              <span class="hover-cue">
+                {text(
+                  locale,
+                  "Hover to scroll",
+                  "Pasa el cursor para recorrer",
+                )}
+              </span>
+            </div>
+            <div class="preview-viewport">
+              <picture>
+                <source
+                  media="(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)"
+                  srcset={`/images/${p.id}-preview.webp`}
+                  width="1200"
+                  height="2160"
+                />
+                <img
+                  src={`/images/${p.id}-static.webp`}
+                  width="800"
+                  height="416"
+                  alt={text(
+                    locale,
+                    `Website preview for ${p.name}`,
+                    `Vista previa del sitio web de ${p.name}`,
+                  )}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+            <div class="preview-controls" hidden>
+              <button
+                type="button"
+                data-preview-toggle
+                data-play={text(
+                  locale,
+                  "Play preview",
+                  "Reproduce la vista previa",
+                )}
+                data-pause={text(
+                  locale,
+                  "Pause preview",
+                  "Pausa la vista previa",
+                )}
+                aria-label={text(
+                  locale,
+                  `Play preview for ${p.name}`,
+                  `Reproduce la vista previa de ${p.name}`,
+                )}
+              >
+                {text(locale, "Play preview", "Reproduce la vista previa")}
+              </button>
+              <button type="button" data-preview-reset>
+                {text(locale, "Reset", "Volver al inicio")}
+              </button>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+<script>
+  const media = matchMedia(
+    "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
+  );
+  document
+    .querySelectorAll<HTMLElement>("[data-project-preview]")
+    .forEach((root) => {
+      const viewport = root.querySelector<HTMLElement>(".preview-viewport")!;
+      const img = root.querySelector("img")!;
+      const controls = root.querySelector<HTMLElement>(".preview-controls")!;
+      const toggle = root.querySelector<HTMLButtonElement>(
+        "[data-preview-toggle]",
+      )!;
+      let animation: Animation | undefined;
+      let manual = false;
+      const label = (playing: boolean) => {
+        const name = playing ? toggle.dataset.pause! : toggle.dataset.play!;
+        toggle.textContent = name;
+        toggle.setAttribute("aria-label", `${name}: ${img.alt}`);
+      };
+      const reset = () => {
+        animation?.cancel();
+        animation = undefined;
+        manual = false;
+        label(false);
+      };
+      const pause = () => {
+        animation?.pause();
+        label(false);
+      };
+      const play = () => {
+        if (!media.matches) return;
+        if (!animation) {
+          const distance = Math.max(
+            0,
+            img.getBoundingClientRect().height -
+              viewport.getBoundingClientRect().height,
+          );
+          if (!distance) return;
+          animation = img.animate(
+            [
+              { transform: "translateY(0)" },
+              { transform: `translateY(-${distance}px)` },
+            ],
+            { duration: 6500, easing: "ease-in-out", fill: "forwards" },
+          );
+          animation.onfinish = () => label(false);
+        } else if (animation.playState === "finished") {
+          animation.currentTime = 0;
+          animation.play();
+        } else animation.play();
+        label(true);
+      };
+      const update = () => {
+        reset();
+        controls.hidden = !media.matches;
+      };
+      media.addEventListener("change", update);
+      update();
+      viewport.addEventListener("pointerenter", () => {
+        if (!manual) play();
+      });
+      viewport.addEventListener("pointerleave", () => {
+        if (!manual) reset();
+      });
+      toggle.addEventListener("click", () => {
+        manual = true;
+        animation?.playState === "running" ? pause() : play();
+      });
+      root
+        .querySelector("[data-preview-reset]")
+        ?.addEventListener("click", reset);
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) pause();
+      });
+      new IntersectionObserver((entries) => {
+        if (!entries[0].isIntersecting) pause();
+      }).observe(root);
+      new ResizeObserver(reset).observe(viewport);
+    });
+</script>

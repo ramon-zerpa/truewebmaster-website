@@ -1,0 +1,324 @@
+---
+import Base from "../layouts/Base.astro";
+import { href, text, type Locale } from "../lib/routes";
+import { primaryCta } from "../lib/content";
+import Arrow from "../components/Arrow.astro";
+import Current from "../components/Current.astro";
+import Journey from "../components/Journey.astro";
+import SolutionsList from "../components/SolutionsList.astro";
+import ProcessList from "../components/ProcessList.astro";
+import ProjectShowcase from "../components/ProjectShowcase.astro";
+import Cta from "../components/Cta.astro";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const title = text(
+  locale,
+  "Managed Digital Operations — True Webmaster",
+  "Operaciones digitales administradas — True Webmaster",
+);
+const description = text(
+  locale,
+  "A connected approach to websites, SEO, CRM, and follow-up for service businesses. Based in Tampa, FL.",
+  "Sitios web, SEO, CRM y seguimiento como parte de una operación conectada para negocios de servicios. En Tampa, FL.",
+);
+const gaps = [
+  [
+    text(locale, "The inquiry waits", "La consulta queda pendiente"),
+    text(
+      locale,
+      "Calls, forms, and messages arrive in different places.",
+      "Las llamadas, los formularios y los mensajes llegan por canales distintos.",
+    ),
+  ],
+  [
+    text(locale, "The next step is unclear", "El siguiente paso no está claro"),
+    text(
+      locale,
+      "No one can see what has been answered, booked, or missed.",
+      "No se distingue qué se ha respondido, reservado o dejado pendiente.",
+    ),
+  ],
+  [
+    text(
+      locale,
+      "Follow-up depends on memory",
+      "El seguimiento depende de la memoria",
+    ),
+    text(
+      locale,
+      "Promising opportunities fade between tools and teams.",
+      "Las oportunidades se pierden entre herramientas y equipos.",
+    ),
+  ],
+];
+const pillars = [
+  [
+    text(locale, "Technical foundation", "Base técnica"),
+    text(
+      locale,
+      "A fast, clear website and sound search presence.",
+      "Un sitio web rápido y claro, con una presencia sólida en buscadores.",
+    ),
+  ],
+  [
+    text(locale, "Operational connection", "Conexión operativa"),
+    text(
+      locale,
+      "Inquiries, response, CRM, and follow-up — designed together.",
+      "Consultas, respuesta, CRM y seguimiento diseñados en conjunto.",
+    ),
+  ],
+  [
+    text(locale, "Ongoing ownership", "Gestión continua"),
+    text(
+      locale,
+      "An engaged partner to monitor, maintain, and improve the system.",
+      "Un socio que acompaña, monitorea, mantiene y mejora el sistema.",
+    ),
+  ],
+];
+---
+
+<Base locale={locale} page="home" title={title} description={description}>
+  <section class="hero">
+    <Current />
+    <div class="container">
+      <div class="hero-message">
+        <p class="eyebrow">
+          {text(
+            locale,
+            "Managed digital operations / Tampa, FL",
+            "Operaciones digitales administradas / Tampa, FL",
+          )}
+        </p>
+        <h1>
+          {text(
+            locale,
+            "Your business has enough tools.",
+            "Tu negocio ya tiene suficientes herramientas.",
+          )}{" "}
+          <br />
+          {text(
+            locale,
+            "What it needs is one system.",
+            "Lo que necesita es un sistema conectado.",
+          )}
+        </h1>
+        <p class="hero-support">
+          {text(
+            locale,
+            "We build and manage the digital journey behind your service business — from being found online to responding, following up, booking, and staying connected.",
+            "Construimos y administramos el recorrido digital de tu negocio de servicios: desde que te encuentran en internet hasta la respuesta, el seguimiento, las citas y la relación con tus clientes.",
+          )}
+        </p>
+        <div class="hero-actions">
+          <a class="button" href={href("contact", locale)}>
+            {primaryCta(locale)}
+            <Arrow />
+          </a>
+          <a class="button button-outline" href={href("process", locale)}>
+            {text(
+              locale,
+              "See how the system works",
+              "Conoce cómo funciona el sistema",
+            )}
+          </a>
+        </div>
+        <p class="hero-capabilities">
+          {text(
+            locale,
+            "Websites + SEO · CRM + follow-up · Automation + responsible AI",
+            "Sitios web y SEO · CRM y seguimiento · Automatización e IA responsable",
+          )}
+        </p>
+      </div>
+      <Journey locale={locale} hero />
+    </div>
+  </section>
+  <section class="credibility">
+    <div class="container credibility-inner">
+      <p>
+        {text(
+          locale,
+          "Built for service businesses with real handoffs to manage.",
+          "Para negocios de servicios que necesitan coordinar cada paso.",
+        )}
+      </p>
+      <ul>
+        <li>{text(locale, "Based in Tampa, FL", "En Tampa, FL")}</li>
+        <li>
+          {text(
+            locale,
+            "English + Spanish service",
+            "Atención en inglés y español",
+          )}
+        </li>
+        <li>
+          {text(locale, "Ongoing partnership", "Acompañamiento continuo")}
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">
+          {text(
+            locale,
+            "The cost of disconnected handoffs",
+            "El costo de los pasos desconectados",
+          )}
+        </p>
+        <h2>
+          {text(
+            locale,
+            "A missed handoff can undo a great first impression.",
+            "Un paso sin atender puede debilitar una buena primera impresión.",
+          )}
+        </h2>
+        <p>
+          {text(
+            locale,
+            "A fast website brings someone in. What happens next decides whether that interest becomes a real conversation. We connect the steps and stay responsible for the system behind them.",
+            "Un sitio rápido atrae la atención. Lo que ocurre después determina si ese interés se convierte en una conversación. Conectamos los pasos y acompañamos el sistema que hay detrás.",
+          )}
+        </p>
+      </div>
+      <ol class="editorial-list gap-list">
+        {gaps.map(([heading, body], i) => (
+          <li>
+            <span class="row-number">{String(i + 1).padStart(2, "0")}</span>
+            <div>
+              <h3>{heading}</h3>
+              <p>{body}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+  <section class="section system-section" id="connected-system">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">
+            {text(
+              locale,
+              "The connected operating system",
+              "El sistema de operación conectado",
+            )}
+          </p>
+          <h2>
+            {text(
+              locale,
+              "From first search to lasting relationship.",
+              "Desde la primera búsqueda hasta una relación duradera.",
+            )}
+          </h2>
+        </div>
+        <p>
+          {text(
+            locale,
+            "One managed journey. Each step has a job.",
+            "Un recorrido administrado. Cada paso tiene una función.",
+          )}
+        </p>
+      </div>
+      <Journey locale={locale} />
+      <p class="system-note">
+        {text(
+          locale,
+          "True Webmaster connects the work, monitors the handoffs, and improves the journey over time.",
+          "True Webmaster conecta el trabajo, monitorea los traspasos y mejora el recorrido en el tiempo.",
+        )}
+      </p>
+    </div>
+  </section>
+  <section class="section" id="solutions">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">
+            {text(locale, "Where we can start", "Por dónde podemos empezar")}
+          </p>
+          <h2>
+            {text(
+              locale,
+              "Start with the bottleneck. Build the connected system.",
+              "Empieza por el punto de fricción. Construye el sistema conectado.",
+            )}
+          </h2>
+        </div>
+        <a class="text-link" href={href("solutions", locale)}>
+          {text(locale, "Explore all solutions", "Explora las soluciones")}
+          <Arrow />
+        </a>
+      </div>
+      <SolutionsList locale={locale} />
+    </div>
+  </section>
+  <section class="section why-section">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">
+          {text(locale, "Why True Webmaster", "Por qué True Webmaster")}
+        </p>
+        <h2>
+          {text(
+            locale,
+            "Built for the work after launch.",
+            "Preparados para el trabajo que continúa después del lanzamiento.",
+          )}
+        </h2>
+        <p>
+          {text(
+            locale,
+            "Our foundation is websites and search. Our value grows when the public experience and the day-to-day operation work as one.",
+            "Nuestra base son los sitios web y los buscadores. Nuestro valor crece cuando la experiencia pública y la operación diaria trabajan como un sistema.",
+          )}
+        </p>
+      </div>
+      <ul class="pillars">
+        {pillars.map(([heading, body], i) => (
+          <li>
+            <span aria-hidden="true">{String.fromCharCode(65 + i)}</span>
+            <div>
+              <h3>{heading}</h3>
+              <p>{body}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+  <ProjectShowcase locale={locale} />
+  <section class="section" id="process">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">{text(locale, "How we work", "Cómo trabajamos")}</p>
+        <h2>
+          {text(
+            locale,
+            "A partner who stays with the system.",
+            "Un socio que sigue al frente del sistema.",
+          )}
+        </h2>
+        <p>
+          {text(
+            locale,
+            "The work starts with understanding the current journey. Then we set priorities, build what is needed, and keep improving what runs.",
+            "El trabajo empieza por entender el recorrido actual. Después definimos prioridades, implementamos lo necesario y mejoramos lo que ya funciona.",
+          )}
+        </p>
+        <a class="text-link" href={href("process", locale)}>
+          {text(locale, "See how it works", "Conoce el proceso")}
+          <Arrow />
+        </a>
+      </div>
+      <ProcessList locale={locale} />
+    </div>
+  </section>
+  <Cta locale={locale} />
+</Base>

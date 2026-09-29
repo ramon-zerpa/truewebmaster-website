@@ -1,0 +1,4350 @@
+{
+  "version": "2.19",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "01 · Brand Board — True Webmaster",
+      "clip": true,
+      "width": 1440,
+      "height": 1100,
+      "fill": "$paper",
+      "layout": "vertical",
+      "gap": 34,
+      "padding": [
+        68,
+        80
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "t1a4o",
+          "name": "Brand board heading",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "qQjGI",
+              "name": "Intro",
+              "width": 850,
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "A3yvX",
+                  "name": "Eyebrow",
+                  "fill": "$tealDeep",
+                  "content": "TRUE WEBMASTER / DIRECTION 02",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$body",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "v6qYW",
+                  "name": "Title",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 800,
+                  "content": "A system you can feel\nin motion.",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$heading",
+                  "fontSize": 54,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "B6axW4",
+              "name": "Immutable True Webmaster logo",
+              "width": 286,
+              "height": 110,
+              "fill": "$ink",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "o8Drh",
+                  "name": "True Webmaster existing logo",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "true-webmaster-logo.webp",
+                    "mode": "fit"
+                  },
+                  "width": 225,
+                  "height": 54
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qgEKE",
+          "name": "Divider",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "$rule"
+        },
+        {
+          "type": "frame",
+          "id": "ugXM8",
+          "name": "Foundations",
+          "width": "fill_container",
+          "gap": 60,
+          "children": [
+            {
+              "type": "frame",
+              "id": "tqmk4",
+              "name": "Color and type",
+              "width": 590,
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "m7e01",
+                  "name": "Palette label",
+                  "fill": "$tealDeep",
+                  "content": "01  /  NEW COLOR SYSTEM",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$body",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "kcT6z",
+                  "name": "Color palette",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "E3OJUP",
+                      "name": "Night / Ink",
+                      "width": 108,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 5,
+                          "id": "HOZfK",
+                          "name": "Night swatch",
+                          "fill": "#111A27",
+                          "width": 108,
+                          "height": 116,
+                          "stroke": "#C4D1D2",
+                          "strokeWidth": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "nRIRH",
+                          "name": "Foundation / Ink label",
+                          "fill": "$muted",
+                          "content": "NIGHT",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "wBEU1",
+                          "name": "Foundation / Ink hex",
+                          "fill": "$ink",
+                          "content": "#111A27",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vpE6K",
+                      "name": "Depth / Blue",
+                      "width": 108,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 5,
+                          "id": "D02ox",
+                          "name": "Depth blue swatch",
+                          "fill": "$coastalBlue",
+                          "width": 108,
+                          "height": 116,
+                          "stroke": "#C4D1D2",
+                          "strokeWidth": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "AU9ZV",
+                          "name": "Depth blue label",
+                          "fill": "$muted",
+                          "content": "DEPTH",
+                          "fontFamily": "$body",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "OApWa",
+                          "name": "Depth blue hex",
+                          "fill": "$ink",
+                          "content": "#125C74",
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "PbA7g",
+                      "name": "Logo / Turquoise",
+                      "width": 108,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 5,
+                          "id": "oMW0m",
+                          "name": "Logo turquoise swatch",
+                          "fill": "#17A2B8",
+                          "width": 108,
+                          "height": 116,
+                          "stroke": "#C4D1D2",
+                          "strokeWidth": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "MvMBo",
+                          "name": "Action / Teal label",
+                          "fill": "$muted",
+                          "content": "TURQUOISE",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "e6fdYM",
+                          "name": "Action / Teal hex",
+                          "fill": "$ink",
+                          "content": "#17A2B8",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "j79vL",
+                      "name": "Atmosphere / Mist",
+                      "width": 108,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 5,
+                          "id": "CwnVj",
+                          "name": "Mist swatch",
+                          "fill": "#A8DDE3",
+                          "width": 108,
+                          "height": 116,
+                          "stroke": "#C4D1D2",
+                          "strokeWidth": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "yPFvN",
+                          "name": "Signal / Mist label",
+                          "fill": "$muted",
+                          "content": "MIST",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "l7Ucga",
+                          "name": "Signal / Mist hex",
+                          "fill": "$ink",
+                          "content": "#A8DDE3",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ls8zg",
+                      "name": "Clean / Neutral",
+                      "width": 108,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 5,
+                          "id": "ZMvDO",
+                          "name": "Neutral swatch",
+                          "fill": "#F3F6F8",
+                          "width": 108,
+                          "height": 116,
+                          "stroke": "#C4D1D2",
+                          "strokeWidth": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "L18iJ",
+                          "name": "Canvas / Paper label",
+                          "fill": "$muted",
+                          "content": "NEUTRAL",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "jRzmB",
+                          "name": "Canvas / Paper hex",
+                          "fill": "$ink",
+                          "content": "#F3F6F8",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "K2YPHm",
+                  "name": "Typography label",
+                  "fill": "$tealDeep",
+                  "content": "02  /  TYPE",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$body",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "Mbjyk",
+                  "name": "Type specimen",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "R2KJv",
+                      "name": "Heading specimen",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 560,
+                      "content": "Every opportunity stays in motion.",
+                      "lineHeight": 1.15,
+                      "fontFamily": "$heading",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OvSot",
+                      "name": "Body specimen",
+                      "fill": "$text",
+                      "textGrowth": "fixed-width",
+                      "width": 550,
+                      "content": "A clear website, connected operations, and a partner who keeps the system moving.",
+                      "lineHeight": 1.15,
+                      "fontFamily": "$body",
+                      "fontSize": 17
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZzHPQ",
+              "name": "Voice and visual grammar",
+              "width": 600,
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "sJdmz",
+                  "name": "Voice label",
+                  "fill": "$tealDeep",
+                  "content": "03  /  VOICE",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$body",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "huKvO",
+                  "name": "Voice line",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 580,
+                  "content": "Confident. Human. In control.",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$heading",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "geu42",
+                  "name": "Voice description",
+                  "fill": "$text",
+                  "textGrowth": "fixed-width",
+                  "width": 570,
+                  "content": "The unchanged logo anchors the palette. Deep blues add trust; turquoise guides action; Mist gives the hero transition a lighter moment.",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$body",
+                  "fontSize": 17
+                },
+                {
+                  "type": "text",
+                  "id": "O0KsV",
+                  "name": "Grammar label",
+                  "fill": "$tealDeep",
+                  "content": "04  /  VISUAL GRAMMAR",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$body",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "q29Cq",
+                  "name": "Connected stages motif",
+                  "width": "fill_container",
+                  "height": 102,
+                  "fill": "$ink",
+                  "cornerRadius": 8,
+                  "gap": 9,
+                  "padding": [
+                    18,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kCr1E",
+                      "name": "Stage Find",
+                      "width": 92,
+                      "height": 60,
+                      "fill": "$inkSoft",
+                      "cornerRadius": 4,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "gkN9v",
+                          "name": "Find",
+                          "fill": "$white",
+                          "content": "Find",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "L5DLKI",
+                          "name": "Arrow 0",
+                          "fill": "$seaMist",
+                          "content": "→",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "c1v6m",
+                      "name": "Stage Respond",
+                      "width": 92,
+                      "height": 60,
+                      "fill": "$inkSoft",
+                      "cornerRadius": 4,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GLWrU",
+                          "name": "Respond",
+                          "fill": "$white",
+                          "content": "Respond",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "L33m3g",
+                          "name": "Arrow 1",
+                          "fill": "$seaMist",
+                          "content": "→",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "MAVEc",
+                      "name": "Stage Follow up",
+                      "width": 110,
+                      "height": 60,
+                      "fill": "$signal",
+                      "cornerRadius": 4,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "cLm4r",
+                          "name": "Follow up",
+                          "fill": "$ink",
+                          "content": "Follow up",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "uRvLW",
+                          "name": "Arrow 2",
+                          "fill": "$seaMist",
+                          "content": "→",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Mcqbv",
+                      "name": "Stage Book",
+                      "width": 92,
+                      "height": 60,
+                      "fill": "$inkSoft",
+                      "cornerRadius": 4,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "hFbCR",
+                          "name": "Book",
+                          "fill": "$white",
+                          "content": "Book",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "SuD5g",
+                          "name": "Arrow 3",
+                          "fill": "$seaMist",
+                          "content": "→",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "N6V1Bl",
+                      "name": "Stage Retain",
+                      "width": 92,
+                      "height": 60,
+                      "fill": "$inkSoft",
+                      "cornerRadius": 4,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "N95moo",
+                          "name": "Retain",
+                          "fill": "$white",
+                          "content": "Retain",
+                          "lineHeight": 1.15,
+                          "fontFamily": "$body",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "brT2i",
+                  "name": "Motif note",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": 560,
+                  "content": "A visual current connects stages. Movement explains ownership and handoffs without literal water imagery.",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$body",
+                  "fontSize": 15
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Omh7T",
+          "name": "Principles footer",
+          "width": "fill_container",
+          "stroke": "$rule",
+          "strokeWidth": {
+            "top": 1
+          },
+          "gap": 30,
+          "padding": [
+            25,
+            0,
+            0,
+            0
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "dUcbu",
+              "name": "POSITION",
+              "width": 390,
+              "layout": "vertical",
+              "gap": 9,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "S1eRqW",
+                  "name": "POSITION label",
+                  "fill": "$tealDeep",
+                  "content": "POSITION",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "wES0o",
+                  "name": "POSITION description",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 380,
+                  "content": "Managed digital operations partner",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$body",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xSNak",
+              "name": "EXPERIENCE",
+              "width": 390,
+              "layout": "vertical",
+              "gap": 9,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BYmj1",
+                  "name": "EXPERIENCE label",
+                  "fill": "$tealDeep",
+                  "content": "EXPERIENCE",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "kYtHV",
+                  "name": "EXPERIENCE description",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 380,
+                  "content": "Expressive, technical, human",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$body",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "jx27b",
+              "name": "PRODUCT",
+              "width": 390,
+              "layout": "vertical",
+              "gap": 9,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "EcQg1",
+                  "name": "PRODUCT label",
+                  "fill": "$tealDeep",
+                  "content": "PRODUCT",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "V3dw3X",
+                  "name": "PRODUCT description",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 380,
+                  "content": "A managed operation, not a software interface",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$body",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zsteQ",
+          "name": "Motion direction",
+          "width": "fill_container",
+          "height": 200,
+          "stroke": "$rule",
+          "strokeWidth": {
+            "top": 1
+          },
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            24,
+            0,
+            0,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "wI8Lv",
+              "name": "Motion heading",
+              "fill": "$tealDeep",
+              "content": "05  /  MOTION PRINCIPLE",
+              "fontFamily": "$body",
+              "fontSize": 13,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "GxD5V",
+              "name": "Motion roles",
+              "width": "fill_container",
+              "gap": 30,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "iALD1",
+                  "name": "Motion HERO SIGNAL",
+                  "width": 290,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "A47d1",
+                      "name": "HERO SIGNAL",
+                      "fill": "$tealDeep",
+                      "content": "HERO SIGNAL",
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "NqMGG",
+                      "name": "HERO SIGNAL description",
+                      "fill": "$text",
+                      "textGrowth": "fixed-width",
+                      "width": 285,
+                      "content": "A flowing route draws in once, then settles into a readable system.",
+                      "lineHeight": 1.3,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dMQYS",
+                  "name": "Motion SCROLL HANDOFFS",
+                  "width": 290,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ck6NR",
+                      "name": "SCROLL HANDOFFS",
+                      "fill": "$tealDeep",
+                      "content": "SCROLL HANDOFFS",
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "y6osK",
+                      "name": "SCROLL HANDOFFS description",
+                      "fill": "$text",
+                      "textGrowth": "fixed-width",
+                      "width": 285,
+                      "content": "As a stage enters, the signal moves to its next owner; content stays visible.",
+                      "lineHeight": 1.3,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "tJvkN",
+                  "name": "Motion INTERACTION",
+                  "width": 290,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LQZLJ",
+                      "name": "INTERACTION",
+                      "fill": "$tealDeep",
+                      "content": "INTERACTION",
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IFFz5",
+                      "name": "INTERACTION description",
+                      "fill": "$text",
+                      "textGrowth": "fixed-width",
+                      "width": 285,
+                      "content": "Links and controls respond with brief directional motion and clear focus.",
+                      "lineHeight": 1.3,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oPXBV",
+                  "name": "Motion ACCESSIBLE DEFAULT",
+                  "width": 290,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "P7gAk7",
+                      "name": "ACCESSIBLE DEFAULT",
+                      "fill": "$tealDeep",
+                      "content": "ACCESSIBLE DEFAULT",
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yt55L",
+                      "name": "ACCESSIBLE DEFAULT description",
+                      "fill": "$text",
+                      "textGrowth": "fixed-width",
+                      "width": 285,
+                      "content": "Reduced motion shows the complete static state. No background video is required.",
+                      "lineHeight": 1.3,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "djkAu",
+      "x": 1560,
+      "y": 0,
+      "name": "02 · Home — English Desktop",
+      "clip": true,
+      "width": 1440,
+      "fill": "$white",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "gueUB",
+          "name": "Navigation",
+          "width": "fill_container",
+          "height": 96,
+          "fill": "$ink",
+          "padding": [
+            20,
+            68
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "t2H8e",
+              "name": "True Webmaster logo",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "true-webmaster-logo.webp",
+                "mode": "fit"
+              },
+              "width": 190,
+              "height": 48
+            },
+            {
+              "type": "frame",
+              "id": "C5DKcK",
+              "name": "Primary links",
+              "gap": 34,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "XfH3t",
+                  "name": "Nav Solutions",
+                  "fill": "#E7F0F1",
+                  "content": "Solutions",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$body",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "WvPeT",
+                  "name": "Nav How it works",
+                  "fill": "#E7F0F1",
+                  "content": "How it works",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$body",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "nfxFj",
+                  "name": "Nav Results",
+                  "fill": "#E7F0F1",
+                  "content": "Results",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$body",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "U4bIw",
+                  "name": "Nav About",
+                  "fill": "#E7F0F1",
+                  "content": "About",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$body",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bqbvh",
+              "name": "Nav actions",
+              "gap": 20,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Bka7h",
+                  "name": "Language selector",
+                  "fill": "$aqua",
+                  "content": "EN  /  ES",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$body",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "H8okE",
+                  "name": "Nav CTA",
+                  "fill": "$signal",
+                  "cornerRadius": 4,
+                  "padding": [
+                    12,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TTSnR",
+                      "name": "Nav CTA text",
+                      "fill": "$ink",
+                      "content": "Book a strategy call  ↗",
+                      "lineHeight": 1.2,
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "nZMuw",
+          "name": "Hero — connected signal",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 90,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#111A27",
+                "position": 0
+              },
+              {
+                "color": "#173A56",
+                "position": 1
+              }
+            ]
+          },
+          "layout": "vertical",
+          "gap": 44,
+          "padding": [
+            70,
+            68,
+            76,
+            68
+          ],
+          "children": [
+            {
+              "type": "path",
+              "id": "v0YP8",
+              "layoutPosition": "absolute",
+              "x": 720,
+              "y": 130,
+              "name": "Signal arc — foreground",
+              "geometry": "M0 170c100-20 130-132 245-97 105 33 132 141 248 70 73-44 95-88 157-61",
+              "viewBox": [
+                0,
+                0,
+                650,
+                240
+              ],
+              "fill": "#FFFFFF00",
+              "width": 650,
+              "height": 240,
+              "stroke": "#A8DDE3A8",
+              "strokeWidth": 3
+            },
+            {
+              "type": "path",
+              "id": "tqOYV",
+              "layoutPosition": "absolute",
+              "x": 720,
+              "y": 152,
+              "name": "Signal arc — echo",
+              "geometry": "M0 170c100-20 130-132 245-97 105 33 132 141 248 70 73-44 95-88 157-61",
+              "viewBox": [
+                0,
+                0,
+                650,
+                240
+              ],
+              "fill": "#FFFFFF00",
+              "width": 650,
+              "height": 240,
+              "stroke": "#17A2B86B",
+              "strokeWidth": 2
+            },
+            {
+              "type": "frame",
+              "id": "H5GvUt",
+              "name": "Hero message",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 23,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "j8GRgB",
+                  "name": "Hero eyebrow",
+                  "fill": "$aqua",
+                  "content": "MANAGED DIGITAL OPERATIONS  /  TAMPA, FL",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$body",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "yS6tZ",
+                  "name": "Hero headline",
+                  "fill": "$white",
+                  "textGrowth": "fixed-width",
+                  "width": 1160,
+                  "content": "Your business has enough tools. What it needs is one system.",
+                  "lineHeight": 1.04,
+                  "fontFamily": "$heading",
+                  "fontSize": 73,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "jSVHp",
+                  "name": "Hero description",
+                  "fill": "#D7EAE9",
+                  "textGrowth": "fixed-width",
+                  "width": 830,
+                  "content": "We build and manage the digital journey behind your service business — from being found online to responding, following up, booking, and staying connected.",
+                  "lineHeight": 1.45,
+                  "fontFamily": "$body",
+                  "fontSize": 21
+                },
+                {
+                  "type": "frame",
+                  "id": "n2S51S",
+                  "name": "Hero actions",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "zHcO5",
+                      "name": "Book strategy call",
+                      "fill": "$signal",
+                      "cornerRadius": 4,
+                      "stroke": "$teal",
+                      "strokeWidth": 1,
+                      "gap": 10,
+                      "padding": [
+                        18,
+                        25
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "bA0z2",
+                          "name": "Book strategy call label",
+                          "fill": "$ink",
+                          "content": "Book a strategy call",
+                          "lineHeight": 1.2,
+                          "fontFamily": "$body",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "tXrba",
+                          "name": "Book strategy call arrow",
+                          "fill": "$ink",
+                          "content": "↗",
+                          "lineHeight": 1.2,
+                          "fontFamily": "$body",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "QjcTF",
+                      "name": "Explore system",
+                      "fill": "#FFFFFF00",
+                      "cornerRadius": 4,
+                      "stroke": "#A6D4D0",
+                      "strokeWidth": 1,
+                      "gap": 10,
+                      "padding": [
+                        18,
+                        25
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "RvJgh",
+                          "name": "Explore system label",
+                          "fill": "$white",
+                          "content": "See how the system works",
+                          "lineHeight": 1.2,
+                          "fontFamily": "$body",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "IN8FB",
+                  "name": "Hero note",
+                  "fill": "#BCE0DB",
+                  "textGrowth": "fixed-width",
+                  "width": 660,
+                  "content": "Websites + SEO  ·  CRM + follow-up  ·  Automation + responsible AI",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pILMe",
+              "name": "Connected signal strip — final",
+              "clip": true,
+              "width": "fill_container",
+              "height": 340,
+              "fill": "#0B202BCF",
+              "cornerRadius": 8,
+              "stroke": "#75A9A4",
+              "strokeWidth": 1,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bmBI4",
+                  "x": 25,
+                  "y": 20,
+                  "name": "Signal strip label",
+                  "fill": "$aqua",
+                  "content": "ONE CONNECTED JOURNEY",
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "oSc4Y",
+                  "x": 1085,
+                  "y": 20,
+                  "name": "Signal strip descriptor",
+                  "fill": "$aqua",
+                  "content": "OPERATED, NOT JUST BUILT",
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "T0brGs",
+                  "x": 25,
+                  "y": 61,
+                  "name": "Signal route track",
+                  "fill": "$signal",
+                  "width": 1253,
+                  "height": 2
+                },
+                {
+                  "type": "frame",
+                  "id": "OppUw",
+                  "x": 25,
+                  "y": 82,
+                  "name": "Handoff 01",
+                  "width": 239,
+                  "height": 180,
+                  "fill": "#FFFFFF10",
+                  "cornerRadius": 4,
+                  "stroke": "#4D7576",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "D5Df36",
+                      "x": 17,
+                      "y": 15,
+                      "name": "Handoff number 01",
+                      "fill": "$aqua",
+                      "content": "01",
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "P4cnn",
+                      "x": 17,
+                      "y": 43,
+                      "name": "Handoff title 01",
+                      "fill": "$white",
+                      "textGrowth": "fixed-width",
+                      "width": 205,
+                      "content": "GET FOUND",
+                      "lineHeight": 1.1,
+                      "fontFamily": "$heading",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "f6xIje",
+                      "x": 17,
+                      "y": 91,
+                      "name": "Handoff detail 01",
+                      "fill": "#C0D9D8",
+                      "content": "Website + search",
+                      "fontFamily": "$body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "P1WtM",
+                  "x": 278,
+                  "y": 82,
+                  "name": "Handoff 02",
+                  "width": 239,
+                  "height": 180,
+                  "fill": "#FFFFFF10",
+                  "cornerRadius": 4,
+                  "stroke": "#4D7576",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "I7XxR",
+                      "x": 17,
+                      "y": 15,
+                      "name": "Handoff number 02",
+                      "fill": "$aqua",
+                      "content": "02",
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "O14H5U",
+                      "x": 17,
+                      "y": 43,
+                      "name": "Handoff title 02",
+                      "fill": "$white",
+                      "textGrowth": "fixed-width",
+                      "width": 205,
+                      "content": "START THE CONVERSATION",
+                      "lineHeight": 1.1,
+                      "fontFamily": "$heading",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "sv7h5",
+                      "x": 17,
+                      "y": 91,
+                      "name": "Handoff detail 02",
+                      "fill": "#C0D9D8",
+                      "content": "Calls + forms",
+                      "fontFamily": "$body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Scczk",
+                  "x": 531,
+                  "y": 82,
+                  "name": "Handoff 03",
+                  "width": 239,
+                  "height": 180,
+                  "fill": "$signal",
+                  "cornerRadius": 4,
+                  "stroke": "$signal",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "P0bKw",
+                      "x": 17,
+                      "y": 15,
+                      "name": "Handoff number 03",
+                      "fill": "$ink",
+                      "content": "03",
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "g5hcD",
+                      "x": 17,
+                      "y": 43,
+                      "name": "Handoff title 03",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 205,
+                      "content": "KEEP IT MOVING",
+                      "lineHeight": 1.1,
+                      "fontFamily": "$heading",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Tf3bM",
+                      "x": 17,
+                      "y": 91,
+                      "name": "Handoff detail 03",
+                      "fill": "$ink",
+                      "content": "CRM + follow-up",
+                      "fontFamily": "$body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "t9DTm",
+                  "x": 784,
+                  "y": 82,
+                  "name": "Handoff 04",
+                  "width": 239,
+                  "height": 180,
+                  "fill": "#FFFFFF10",
+                  "cornerRadius": 4,
+                  "stroke": "#4D7576",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nkR2j",
+                      "x": 17,
+                      "y": 15,
+                      "name": "Handoff number 04",
+                      "fill": "$aqua",
+                      "content": "04",
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Vh5US",
+                      "x": 17,
+                      "y": 43,
+                      "name": "Handoff title 04",
+                      "fill": "$white",
+                      "textGrowth": "fixed-width",
+                      "width": 205,
+                      "content": "TURN INTEREST INTO ACTION",
+                      "lineHeight": 1.1,
+                      "fontFamily": "$heading",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "V6IUP",
+                      "x": 17,
+                      "y": 91,
+                      "name": "Handoff detail 04",
+                      "fill": "#C0D9D8",
+                      "content": "Booking + handoff",
+                      "fontFamily": "$body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "x5jDMl",
+                  "x": 1037,
+                  "y": 82,
+                  "name": "Handoff 05",
+                  "width": 239,
+                  "height": 180,
+                  "fill": "#FFFFFF10",
+                  "cornerRadius": 4,
+                  "stroke": "#4D7576",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PYnfG",
+                      "x": 17,
+                      "y": 15,
+                      "name": "Handoff number 05",
+                      "fill": "$aqua",
+                      "content": "05",
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Jb1FG",
+                      "x": 17,
+                      "y": 43,
+                      "name": "Handoff title 05",
+                      "fill": "$white",
+                      "textGrowth": "fixed-width",
+                      "width": 205,
+                      "content": "STAY CONNECTED",
+                      "lineHeight": 1.1,
+                      "fontFamily": "$heading",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "w4rbjC",
+                      "x": 17,
+                      "y": 91,
+                      "name": "Handoff detail 05",
+                      "fill": "#C0D9D8",
+                      "content": "Reviews + retention",
+                      "fontFamily": "$body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "dQ9mQ",
+          "name": "Credibility band",
+          "width": "fill_container",
+          "height": 92,
+          "fill": "$seaMist",
+          "padding": [
+            24,
+            68
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "IFz6O",
+              "name": "Credibility statement",
+              "fill": "$ink",
+              "textGrowth": "fixed-width",
+              "width": 640,
+              "content": "Built for service businesses with real handoffs to manage.",
+              "lineHeight": 1.2,
+              "fontFamily": "$body",
+              "fontSize": 16,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "yZmQu",
+              "name": "Credibility details",
+              "gap": 26,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Q5KlC",
+                  "name": "TAMPA BAY ROOTS",
+                  "fill": "$tealDeep",
+                  "content": "BASED IN TAMPA, FL",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$body",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "LuHFD",
+                  "name": "ENGLISH + SPANISH SERVICE",
+                  "fill": "$tealDeep",
+                  "content": "ENGLISH + SPANISH SERVICE",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$body",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "o8n7X",
+                  "name": "ONGOING PARTNERSHIP",
+                  "fill": "$tealDeep",
+                  "content": "ONGOING PARTNERSHIP",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$body",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Pz7YK",
+          "name": "Problem recognition",
+          "width": "fill_container",
+          "fill": "$white",
+          "gap": 100,
+          "padding": [
+            112,
+            68
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "hcboU",
+              "name": "Problem message",
+              "width": 550,
+              "layout": "vertical",
+              "gap": 22,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wPmOE",
+                  "name": "Problem label",
+                  "fill": "$tealDeep",
+                  "content": "THE COST OF DISCONNECTED HANDOFFS",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "r1IaIU",
+                  "name": "Problem headline",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 540,
+                  "content": "A missed handoff can undo a great first impression.",
+                  "lineHeight": 1.13,
+                  "fontFamily": "$heading",
+                  "fontSize": 42,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "iv0sk",
+                  "name": "Problem body",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": 535,
+                  "content": "A fast website brings someone in. What happens next decides whether that interest becomes a real conversation. We connect the steps and stay responsible for the system behind them.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$body",
+                  "fontSize": 18
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ocP7E",
+              "name": "Common gaps",
+              "width": 650,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "sMqvH",
+                  "name": "Gap 01",
+                  "width": "fill_container",
+                  "stroke": "$rule",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 24,
+                  "padding": [
+                    22,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VnRfB",
+                      "name": "Gap number 01",
+                      "fill": "$tealDeep",
+                      "content": "01",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xDYkc",
+                      "name": "Gap copy 01",
+                      "width": 570,
+                      "layout": "vertical",
+                      "gap": 7,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "HLnHF",
+                          "name": "Gap headline 01",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": 560,
+                          "content": "The inquiry waits",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 21,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "zCS0R",
+                          "name": "Gap detail 01",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": 560,
+                          "content": "Calls, forms, and messages arrive in different places.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 16
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QLNup",
+                  "name": "Gap 02",
+                  "width": "fill_container",
+                  "stroke": "$rule",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 24,
+                  "padding": [
+                    22,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "y6eyf",
+                      "name": "Gap number 02",
+                      "fill": "$tealDeep",
+                      "content": "02",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "eejLV",
+                      "name": "Gap copy 02",
+                      "width": 570,
+                      "layout": "vertical",
+                      "gap": 7,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "SaB9x",
+                          "name": "Gap headline 02",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": 560,
+                          "content": "The next step is unclear",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 21,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "bJLNw",
+                          "name": "Gap detail 02",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": 560,
+                          "content": "No one can see what has been answered, booked, or missed.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 16
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "r0OAcK",
+                  "name": "Gap 03",
+                  "width": "fill_container",
+                  "stroke": "$rule",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 24,
+                  "padding": [
+                    22,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GppC9",
+                      "name": "Gap number 03",
+                      "fill": "$tealDeep",
+                      "content": "03",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ZhWB6",
+                      "name": "Gap copy 03",
+                      "width": 570,
+                      "layout": "vertical",
+                      "gap": 7,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "p3PvBV",
+                          "name": "Gap headline 03",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": 560,
+                          "content": "Follow-up depends on memory",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 21,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "rMjEu",
+                          "name": "Gap detail 03",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": 560,
+                          "content": "Promising opportunities fade between tools and teams.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 16
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "N8ul6",
+          "name": "Connected system",
+          "width": "fill_container",
+          "fill": "$paper",
+          "layout": "vertical",
+          "gap": 38,
+          "padding": [
+            100,
+            68
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "xx5fK",
+              "name": "System heading",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "bqQn3",
+                  "name": "System heading copy",
+                  "width": 740,
+                  "layout": "vertical",
+                  "gap": 15,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WFLYG",
+                      "name": "System label",
+                      "fill": "$tealDeep",
+                      "content": "THE CONNECTED OPERATING SYSTEM",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "YpFWx",
+                      "name": "System headline",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 735,
+                      "content": "From first search to lasting relationship.",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$heading",
+                      "fontSize": 42,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "G1cI6p",
+                  "name": "System side note",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": 370,
+                  "content": "One managed journey. Each step has a job.",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 17,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "df57C",
+              "name": "System stages",
+              "width": "fill_container",
+              "fill": "$ink",
+              "cornerRadius": 6,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "m2Kzyl",
+                  "name": "System 01",
+                  "width": 260,
+                  "height": 190,
+                  "stroke": "#405361",
+                  "strokeWidth": {
+                    "right": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    25,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Zjkoa",
+                      "name": "System number 01",
+                      "fill": "#80CDD5",
+                      "content": "01",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Qs53G",
+                      "name": "System title 01",
+                      "fill": "$white",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "BE SEEN",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$heading",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dRRLH",
+                      "name": "System detail 01",
+                      "fill": "#BED4D7",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "Website + search",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PvKgI",
+                  "name": "System 02",
+                  "width": 260,
+                  "height": 190,
+                  "stroke": "#405361",
+                  "strokeWidth": {
+                    "right": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    25,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "K8FsV",
+                      "name": "System number 02",
+                      "fill": "#80CDD5",
+                      "content": "02",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "alyA5",
+                      "name": "System title 02",
+                      "fill": "$white",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "BE REACHED",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$heading",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xvvTv",
+                      "name": "System detail 02",
+                      "fill": "#BED4D7",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "Inquiry + response",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "I6dyK",
+                  "name": "System 03",
+                  "width": 260,
+                  "height": 190,
+                  "fill": "$signal",
+                  "stroke": "#405361",
+                  "strokeWidth": {
+                    "right": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    25,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "m3SO1o",
+                      "name": "System number 03",
+                      "fill": "$ink",
+                      "content": "03",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Y8iGA0",
+                      "name": "System title 03",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "KEEP MOVING",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$heading",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vOjIQ",
+                      "name": "System detail 03",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "CRM + follow-up",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ERWAX",
+                  "name": "System 04",
+                  "width": 260,
+                  "height": 190,
+                  "stroke": "#405361",
+                  "strokeWidth": {
+                    "right": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    25,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "X1VQI9",
+                      "name": "System number 04",
+                      "fill": "#80CDD5",
+                      "content": "04",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hmGbf",
+                      "name": "System title 04",
+                      "fill": "$white",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "BE CHOSEN",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$heading",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OXDZe",
+                      "name": "System detail 04",
+                      "fill": "#BED4D7",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "Booking + handoff",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "i2UYVs",
+                  "name": "System 05",
+                  "width": 260,
+                  "height": 190,
+                  "stroke": "#405361",
+                  "strokeWidth": {
+                    "right": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    25,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Og6cn",
+                      "name": "System number 05",
+                      "fill": "#80CDD5",
+                      "content": "05",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "KLwiB",
+                      "name": "System title 05",
+                      "fill": "$white",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "STAY CONNECTED",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$heading",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "SzYPF",
+                      "name": "System detail 05",
+                      "fill": "#BED4D7",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "Reviews + retention",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "OkkPg",
+              "name": "System management note",
+              "fill": "$ink",
+              "textGrowth": "fixed-width",
+              "width": 1100,
+              "content": "True Webmaster connects the work, monitors the handoffs, and improves the journey over time.",
+              "lineHeight": 1.25,
+              "fontFamily": "$heading",
+              "fontSize": 19,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Buvyl",
+          "name": "Solutions overview",
+          "width": "fill_container",
+          "fill": "$white",
+          "layout": "vertical",
+          "gap": 36,
+          "padding": [
+            106,
+            68
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "EvfVu",
+              "name": "Solutions heading",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "m5I4u",
+                  "name": "Solutions intro",
+                  "width": 770,
+                  "layout": "vertical",
+                  "gap": 15,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "p3Jf8t",
+                      "name": "Solutions label",
+                      "fill": "$tealDeep",
+                      "content": "WAYS WE CAN START",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "JJeIN",
+                      "name": "Solutions headline",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 760,
+                      "content": "Start with the bottleneck. Build the connected system.",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$heading",
+                      "fontSize": 42,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "RxTrD",
+                  "name": "Explore solutions link",
+                  "fill": "$tealDeep",
+                  "content": "Explore all solutions  ↗",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "VPB5d",
+              "name": "Solution list",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "e9w6V8",
+                  "name": "Solution 01",
+                  "width": "fill_container",
+                  "stroke": "$rule",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 26,
+                  "padding": [
+                    23,
+                    8
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yoLv5",
+                      "name": "Solution number 01",
+                      "fill": "$tealDeep",
+                      "content": "01",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "QeSkI",
+                      "name": "Solution copy 01",
+                      "width": 780,
+                      "layout": "vertical",
+                      "gap": 7,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WrAiZ",
+                          "name": "Solution title 01",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": 760,
+                          "content": "Digital foundation",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 25,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "g8T1F",
+                          "name": "Solution description 01",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": 760,
+                          "content": "Make it easy to find, trust, and contact your business.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 16
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "C75NQ9",
+                      "name": "Solution scope 01",
+                      "fill": "$tealDeep",
+                      "textGrowth": "fixed-width",
+                      "width": 340,
+                      "content": "Website · SEO · measurement",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LgrEf",
+                      "name": "Solution arrow 01",
+                      "fill": "$tealDeep",
+                      "content": "↗",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ClATF",
+                  "name": "Solution 02",
+                  "width": "fill_container",
+                  "stroke": "$rule",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 26,
+                  "padding": [
+                    23,
+                    8
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "x6j5Q",
+                      "name": "Solution number 02",
+                      "fill": "$tealDeep",
+                      "content": "02",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "mKpV9",
+                      "name": "Solution copy 02",
+                      "width": 780,
+                      "layout": "vertical",
+                      "gap": 7,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "y2ZIU",
+                          "name": "Solution title 02",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": 760,
+                          "content": "Lead response",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 25,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "rgiT7",
+                          "name": "Solution description 02",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": 760,
+                          "content": "Give every inquiry a clear owner and next step.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 16
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "HChEO",
+                      "name": "Solution scope 02",
+                      "fill": "$tealDeep",
+                      "textGrowth": "fixed-width",
+                      "width": 340,
+                      "content": "Forms · calls · inbox · routing",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "UAukm",
+                      "name": "Solution arrow 02",
+                      "fill": "$tealDeep",
+                      "content": "↗",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hLC3f",
+                  "name": "Solution 03",
+                  "width": "fill_container",
+                  "stroke": "$rule",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 26,
+                  "padding": [
+                    23,
+                    8
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SXAv1",
+                      "name": "Solution number 03",
+                      "fill": "$tealDeep",
+                      "content": "03",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "f7lvk",
+                      "name": "Solution copy 03",
+                      "width": 780,
+                      "layout": "vertical",
+                      "gap": 7,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "x1Fhw",
+                          "name": "Solution title 03",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": 760,
+                          "content": "Sales follow-up",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 25,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "oTW2f",
+                          "name": "Solution description 03",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": 760,
+                          "content": "Keep opportunities visible and moving.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 16
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "N4vEd",
+                      "name": "Solution scope 03",
+                      "fill": "$tealDeep",
+                      "textGrowth": "fixed-width",
+                      "width": 340,
+                      "content": "CRM · pipelines · reminders",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rCyqn",
+                      "name": "Solution arrow 03",
+                      "fill": "$tealDeep",
+                      "content": "↗",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "K4uXgo",
+                  "name": "Solution 04",
+                  "width": "fill_container",
+                  "stroke": "$rule",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 26,
+                  "padding": [
+                    23,
+                    8
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "p4yoS",
+                      "name": "Solution number 04",
+                      "fill": "$tealDeep",
+                      "content": "04",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "f9YRLO",
+                      "name": "Solution copy 04",
+                      "width": 780,
+                      "layout": "vertical",
+                      "gap": 7,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "qPAGi",
+                          "name": "Solution title 04",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": 760,
+                          "content": "Reputation & retention",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 25,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dunX3",
+                          "name": "Solution description 04",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": 760,
+                          "content": "Make the relationship continue after the first job.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 16
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "m5axz",
+                      "name": "Solution scope 04",
+                      "fill": "$tealDeep",
+                      "textGrowth": "fixed-width",
+                      "width": 340,
+                      "content": "Reviews · reactivation · referrals",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "F7COv",
+                      "name": "Solution arrow 04",
+                      "fill": "$tealDeep",
+                      "content": "↗",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZVV6V",
+                  "name": "Solution 05",
+                  "width": "fill_container",
+                  "stroke": "$rule",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 26,
+                  "padding": [
+                    23,
+                    8
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nF82X",
+                      "name": "Solution number 05",
+                      "fill": "$tealDeep",
+                      "content": "05",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "U9h2Q",
+                      "name": "Solution copy 05",
+                      "width": 780,
+                      "layout": "vertical",
+                      "gap": 7,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "s4dcPz",
+                          "name": "Solution title 05",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": 760,
+                          "content": "Managed operations",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 25,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "JnwM9",
+                          "name": "Solution description 05",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": 760,
+                          "content": "Keep the whole system healthy as the business changes.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 16
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "aoNOC",
+                      "name": "Solution scope 05",
+                      "fill": "$tealDeep",
+                      "textGrowth": "fixed-width",
+                      "width": 340,
+                      "content": "Monitoring · support · improvement",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "e8qJEV",
+                      "name": "Solution arrow 05",
+                      "fill": "$tealDeep",
+                      "content": "↗",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "bGund",
+          "name": "Why True Webmaster",
+          "width": "fill_container",
+          "fill": "$ink",
+          "gap": 105,
+          "padding": [
+            92,
+            68
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Wmk5F",
+              "name": "Why intro",
+              "width": 550,
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "B3kJf",
+                  "name": "Why label",
+                  "fill": "#80CDD5",
+                  "content": "WHY TRUE WEBMASTER",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "HK146",
+                  "name": "Why headline",
+                  "fill": "$white",
+                  "textGrowth": "fixed-width",
+                  "width": 530,
+                  "content": "Built for the work after launch.",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$heading",
+                  "fontSize": 43,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "maTxV",
+                  "name": "Why description",
+                  "fill": "#BBD1D4",
+                  "textGrowth": "fixed-width",
+                  "width": 530,
+                  "content": "Our foundation is websites and search. Our value grows when the public experience and the day-to-day operation work as one.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$body",
+                  "fontSize": 18
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "qrHQP",
+              "name": "Why points",
+              "width": 650,
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "VPVNa",
+                  "name": "Pillar A",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "padding": [
+                    5,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ppdyj",
+                      "name": "Pillar letter A",
+                      "fill": "#80CDD5",
+                      "content": "A",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "BPbAJ",
+                      "name": "Pillar copy A",
+                      "width": 590,
+                      "layout": "vertical",
+                      "gap": 7,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "VJOVu",
+                          "name": "Pillar headline A",
+                          "fill": "$white",
+                          "textGrowth": "fixed-width",
+                          "width": 580,
+                          "content": "Technical foundation",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 23,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "K8jR0J",
+                          "name": "Pillar body A",
+                          "fill": "#BBD1D4",
+                          "textGrowth": "fixed-width",
+                          "width": 580,
+                          "content": "A fast, clear website and sound search presence.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 16
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "X8MlXo",
+                  "name": "Pillar B",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "padding": [
+                    5,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XO7Hz",
+                      "name": "Pillar letter B",
+                      "fill": "#80CDD5",
+                      "content": "B",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "bHrSf",
+                      "name": "Pillar copy B",
+                      "width": 590,
+                      "layout": "vertical",
+                      "gap": 7,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "E4sSgp",
+                          "name": "Pillar headline B",
+                          "fill": "$white",
+                          "textGrowth": "fixed-width",
+                          "width": 580,
+                          "content": "Operational connection",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 23,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "P1aFx",
+                          "name": "Pillar body B",
+                          "fill": "#BBD1D4",
+                          "textGrowth": "fixed-width",
+                          "width": 580,
+                          "content": "Inquiries, response, CRM, and follow-up designed together.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 16
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "O5Em9i",
+                  "name": "Pillar C",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "padding": [
+                    5,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hVUfO",
+                      "name": "Pillar letter C",
+                      "fill": "#80CDD5",
+                      "content": "C",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "IvuFj",
+                      "name": "Pillar copy C",
+                      "width": 590,
+                      "layout": "vertical",
+                      "gap": 7,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "rHGwK",
+                          "name": "Pillar headline C",
+                          "fill": "$white",
+                          "textGrowth": "fixed-width",
+                          "width": 580,
+                          "content": "Ongoing ownership",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 23,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "fRPVX",
+                          "name": "Pillar body C",
+                          "fill": "#BBD1D4",
+                          "textGrowth": "fixed-width",
+                          "width": 580,
+                          "content": "An engaged partner to monitor, maintain, and improve the system.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 16
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "j2l2ah",
+          "name": "Selected work",
+          "width": "fill_container",
+          "fill": "$paper",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            100,
+            68
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "A88qJ",
+              "name": "Proof heading",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "h8NkG",
+                  "name": "Proof introduction",
+                  "width": 780,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MygPO",
+                      "name": "Proof label",
+                      "fill": "$tealDeep",
+                      "content": "SELECTED WORK",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vlFuR",
+                      "name": "Proof headline",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 770,
+                      "content": "Real businesses. Specific work. Clear context.",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$heading",
+                      "fontSize": 42,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "LNBkf",
+                  "name": "Results link",
+                  "fill": "$tealDeep",
+                  "content": "View selected work  ↗",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "F9rHGm",
+              "name": "Project previews",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 48,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "YCdU2",
+                  "name": "Project Affordable Roofing Systems",
+                  "width": "fill_container",
+                  "fill": "$paper",
+                  "stroke": "$paper",
+                  "gap": 48,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Cn5og",
+                      "name": "Affordable Roofing Systems case summary",
+                      "width": 390,
+                      "layout": "vertical",
+                      "gap": 21,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ml9V3",
+                          "name": "Project top Affordable Roofing Systems",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "bxF66",
+                              "name": "Project category Affordable Roofing Systems",
+                              "fill": "$tealDeep",
+                              "content": "ROOFING SERVICES",
+                              "lineHeight": 1.25,
+                              "fontFamily": "$body",
+                              "fontSize": 12,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "cwFLM",
+                          "name": "Project name Affordable Roofing Systems",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Affordable Roofing Systems",
+                          "lineHeight": 1.07,
+                          "fontFamily": "$heading",
+                          "fontSize": 36,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "qDpGq",
+                          "name": "Project story Affordable Roofing Systems",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Clear paths from urgent repairs to roofing services and estimate requests.",
+                          "lineHeight": 1.45,
+                          "fontFamily": "$body",
+                          "fontSize": 18
+                        },
+                        {
+                          "type": "text",
+                          "id": "rcx0b",
+                          "name": "Project validation note Affordable Roofing Systems",
+                          "fill": "$tealDeep",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Visit the live site  ↗",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "BFS8d",
+                      "name": "Affordable Roofing Systems scrolling website preview",
+                      "clip": true,
+                      "width": 866,
+                      "height": 440,
+                      "fill": "$ink",
+                      "cornerRadius": 5,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "GzivV",
+                          "name": "Affordable Roofing Systems browser bar",
+                          "width": "fill_container",
+                          "height": 38,
+                          "fill": "$inkSoft",
+                          "padding": [
+                            0,
+                            15
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "n4LhyB",
+                              "name": "Affordable Roofing Systems browser identity",
+                              "gap": 12,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "DO8F3",
+                                  "name": "Affordable Roofing Systems browser dots",
+                                  "gap": 5,
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "ellipse",
+                                      "id": "dOP60",
+                                      "name": "Affordable Roofing Systems browser dot 1",
+                                      "fill": "#EF8A82",
+                                      "width": 7,
+                                      "height": 7
+                                    },
+                                    {
+                                      "type": "ellipse",
+                                      "id": "RM0HF",
+                                      "name": "Affordable Roofing Systems browser dot 2",
+                                      "fill": "#EFCB77",
+                                      "width": 7,
+                                      "height": 7
+                                    },
+                                    {
+                                      "type": "ellipse",
+                                      "id": "o92qd",
+                                      "name": "Affordable Roofing Systems browser dot 3",
+                                      "fill": "#70C6B3",
+                                      "width": 7,
+                                      "height": 7
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "NyMZY",
+                                  "name": "Affordable Roofing Systems preview domain",
+                                  "fill": "#E1E7EA",
+                                  "content": "affordableroofingflorida.com",
+                                  "fontFamily": "$body",
+                                  "fontSize": 12,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "eJR4b",
+                              "name": "Affordable Roofing Systems hover instruction",
+                              "fill": "#A8DDE3",
+                              "content": "HOVER TO SCROLL  ↓",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "700",
+                              "letterSpacing": 1.2
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ZeC4s",
+                          "name": "Affordable Roofing Systems preview viewport",
+                          "clip": true,
+                          "width": "fill_container",
+                          "height": 402,
+                          "fill": "$white",
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "mwZ5x",
+                              "x": 0,
+                              "y": 0,
+                              "name": "Affordable Roofing Systems full-page screenshot",
+                              "width": 866,
+                              "height": 5850,
+                              "fill": {
+                                "type": "image",
+                                "enabled": true,
+                                "url": "assets/affordable-roofing-full.png",
+                                "mode": "stretch"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "BjyEd",
+                  "name": "Project showcase divider",
+                  "width": "fill_container",
+                  "height": 1,
+                  "fill": "$rule"
+                },
+                {
+                  "type": "frame",
+                  "id": "ivp2q",
+                  "name": "Project Palm Wellness Center",
+                  "width": "fill_container",
+                  "fill": "$paper",
+                  "stroke": "$paper",
+                  "gap": 48,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "cwZQ6",
+                      "name": "Palm Wellness Center scrolling website preview",
+                      "clip": true,
+                      "width": 866,
+                      "height": 440,
+                      "fill": "$ink",
+                      "cornerRadius": 5,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "UAdN5",
+                          "name": "Palm Wellness Center browser bar",
+                          "width": "fill_container",
+                          "height": 38,
+                          "fill": "$inkSoft",
+                          "padding": [
+                            0,
+                            15
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "PDuce",
+                              "name": "Palm Wellness Center browser identity",
+                              "gap": 12,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "buekn",
+                                  "name": "Palm Wellness Center browser dots",
+                                  "gap": 5,
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "ellipse",
+                                      "id": "A8w8L",
+                                      "name": "Palm Wellness Center browser dot 1",
+                                      "fill": "#EF8A82",
+                                      "width": 7,
+                                      "height": 7
+                                    },
+                                    {
+                                      "type": "ellipse",
+                                      "id": "fxcvB",
+                                      "name": "Palm Wellness Center browser dot 2",
+                                      "fill": "#EFCB77",
+                                      "width": 7,
+                                      "height": 7
+                                    },
+                                    {
+                                      "type": "ellipse",
+                                      "id": "ivK00",
+                                      "name": "Palm Wellness Center browser dot 3",
+                                      "fill": "#70C6B3",
+                                      "width": 7,
+                                      "height": 7
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "J0Xtv",
+                                  "name": "Palm Wellness Center preview domain",
+                                  "fill": "#E1E7EA",
+                                  "content": "palmwellness.center",
+                                  "fontFamily": "$body",
+                                  "fontSize": 12,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "r3LJKO",
+                              "name": "Palm Wellness Center hover instruction",
+                              "fill": "#A8DDE3",
+                              "content": "HOVER TO SCROLL  ↓",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "700",
+                              "letterSpacing": 1.2
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "n9JQTs",
+                          "name": "Palm Wellness Center preview viewport",
+                          "clip": true,
+                          "width": "fill_container",
+                          "height": 402,
+                          "fill": "$white",
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "jTo3W",
+                              "x": 0,
+                              "y": 0,
+                              "name": "Palm Wellness Center full-page screenshot",
+                              "width": 866,
+                              "height": 4157,
+                              "fill": {
+                                "type": "image",
+                                "enabled": true,
+                                "url": "assets/palm-wellness-full.png",
+                                "mode": "stretch"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "OtpTX",
+                      "name": "Palm Wellness Center case summary",
+                      "width": 390,
+                      "layout": "vertical",
+                      "gap": 21,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "dDFMV",
+                          "name": "Project top Palm Wellness Center",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "UxUIY",
+                              "name": "Project category Palm Wellness Center",
+                              "fill": "$tealDeep",
+                              "content": "PRIMARY CARE & PHYSICAL REHABILITATION",
+                              "lineHeight": 1.25,
+                              "fontFamily": "$body",
+                              "fontSize": 12,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "cEvq1",
+                          "name": "Project name Palm Wellness Center",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Palm Wellness Center",
+                          "lineHeight": 1.07,
+                          "fontFamily": "$heading",
+                          "fontSize": 36,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "tJyEZ",
+                          "name": "Project story Palm Wellness Center",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Primary care and physical rehabilitation brought together in one clear experience.",
+                          "lineHeight": 1.45,
+                          "fontFamily": "$body",
+                          "fontSize": 18
+                        },
+                        {
+                          "type": "text",
+                          "id": "E61aDJ",
+                          "name": "Project validation note Palm Wellness Center",
+                          "fill": "$tealDeep",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Preview the upcoming site  ↗",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "p60NfY",
+          "name": "How partnership works",
+          "width": "fill_container",
+          "fill": "$white",
+          "gap": 100,
+          "padding": [
+            108,
+            68
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "CvnMw",
+              "name": "Process intro",
+              "width": 500,
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "FKNmg",
+                  "name": "Process label",
+                  "fill": "$tealDeep",
+                  "content": "HOW WE WORK",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "KS12Q",
+                  "name": "Process headline",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 495,
+                  "content": "A partner who stays with the system.",
+                  "lineHeight": 1.12,
+                  "fontFamily": "$heading",
+                  "fontSize": 43,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "IfytH",
+                  "name": "Process copy",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": 495,
+                  "content": "The work starts with understanding the current journey. Then we set priorities, build what is needed, and keep improving what runs.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$body",
+                  "fontSize": 18
+                },
+                {
+                  "type": "text",
+                  "id": "T0BBu",
+                  "name": "Process link",
+                  "fill": "$tealDeep",
+                  "content": "See how it works  ↗",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "iO2A4",
+              "name": "Operating rhythm",
+              "width": 700,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "B7MVS",
+                  "name": "Process 01",
+                  "width": "fill_container",
+                  "stroke": "$rule",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 24,
+                  "padding": [
+                    16,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Yzpu9",
+                      "name": "Process number 01",
+                      "fill": "$tealDeep",
+                      "content": "01",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "KCID1",
+                      "name": "Process copy 01",
+                      "width": 640,
+                      "layout": "vertical",
+                      "gap": 5,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "x7rBj8",
+                          "name": "Process title 01",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": 620,
+                          "content": "Audit",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 21,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "yaaj3",
+                          "name": "Process detail 01",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": 620,
+                          "content": "Map goals, tools, gaps, and existing handoffs.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 15
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "v9I0R",
+                  "name": "Process 02",
+                  "width": "fill_container",
+                  "stroke": "$rule",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 24,
+                  "padding": [
+                    16,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fSbXS",
+                      "name": "Process number 02",
+                      "fill": "$tealDeep",
+                      "content": "02",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fCiax",
+                      "name": "Process copy 02",
+                      "width": 640,
+                      "layout": "vertical",
+                      "gap": 5,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "o0LAz",
+                          "name": "Process title 02",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": 620,
+                          "content": "Architect",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 21,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "GZFT6",
+                          "name": "Process detail 02",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": 620,
+                          "content": "Decide what should connect and what matters first.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 15
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RRWUz",
+                  "name": "Process 03",
+                  "width": "fill_container",
+                  "stroke": "$rule",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 24,
+                  "padding": [
+                    16,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bhLxR",
+                      "name": "Process number 03",
+                      "fill": "$tealDeep",
+                      "content": "03",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Hda1b",
+                      "name": "Process copy 03",
+                      "width": 640,
+                      "layout": "vertical",
+                      "gap": 5,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "XPGoZ",
+                          "name": "Process title 03",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": 620,
+                          "content": "Build",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 21,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "R2LXG",
+                          "name": "Process detail 03",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": 620,
+                          "content": "Put the agreed foundation and workflows in place.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 15
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QGL0m",
+                  "name": "Process 04",
+                  "width": "fill_container",
+                  "stroke": "$rule",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 24,
+                  "padding": [
+                    16,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mt2BV",
+                      "name": "Process number 04",
+                      "fill": "$tealDeep",
+                      "content": "04",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LFqsE",
+                      "name": "Process copy 04",
+                      "width": 640,
+                      "layout": "vertical",
+                      "gap": 5,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "sRJFk",
+                          "name": "Process title 04",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": 620,
+                          "content": "Operate",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 21,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "YNmNe",
+                          "name": "Process detail 04",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": 620,
+                          "content": "Support, monitor, and maintain the working system.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 15
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "TLtmu",
+                  "name": "Process 05",
+                  "width": "fill_container",
+                  "stroke": "$rule",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 24,
+                  "padding": [
+                    16,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uCVYq",
+                      "name": "Process number 05",
+                      "fill": "$tealDeep",
+                      "content": "05",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "swEx2",
+                      "name": "Process copy 05",
+                      "width": 640,
+                      "layout": "vertical",
+                      "gap": 5,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NhA4w",
+                          "name": "Process title 05",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": 620,
+                          "content": "Improve",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$heading",
+                          "fontSize": 21,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "T1vZ3D",
+                          "name": "Process detail 05",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": 620,
+                          "content": "Review evidence and refine the next priorities.",
+                          "lineHeight": 1.25,
+                          "fontFamily": "$body",
+                          "fontSize": 15
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "x414T7",
+          "name": "Final invitation — deep blue current",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 90,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#0D314B",
+                "position": 0
+              },
+              {
+                "color": "#125C74",
+                "position": 1
+              }
+            ]
+          },
+          "gap": 100,
+          "padding": [
+            86,
+            68
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "path",
+              "id": "o4yGg3",
+              "layoutPosition": "absolute",
+              "x": 850,
+              "y": 48,
+              "name": "CTA current line",
+              "geometry": "M0 156c90-58 137 12 227-44 85-53 143 8 273-70",
+              "viewBox": [
+                0,
+                0,
+                500,
+                230
+              ],
+              "fill": "#FFFFFF00",
+              "width": 500,
+              "height": 230,
+              "stroke": "#A8DDE375",
+              "strokeWidth": 3
+            },
+            {
+              "type": "path",
+              "id": "PWWOg",
+              "layoutPosition": "absolute",
+              "x": 850,
+              "y": 74,
+              "name": "CTA current echo",
+              "geometry": "M0 156c90-58 137 12 227-44 85-53 143 8 273-70",
+              "viewBox": [
+                0,
+                0,
+                500,
+                230
+              ],
+              "fill": "#FFFFFF00",
+              "width": 500,
+              "height": 230,
+              "stroke": "#17A2B86A",
+              "strokeWidth": 2
+            },
+            {
+              "type": "frame",
+              "id": "k2GT4",
+              "name": "Invitation copy",
+              "width": 820,
+              "layout": "vertical",
+              "gap": 15,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Kre1v",
+                  "name": "Invitation label",
+                  "fill": "#C4E9ED",
+                  "content": "A PRACTICAL FIRST CONVERSATION",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "XJWmr",
+                  "name": "Invitation headline",
+                  "fill": "$white",
+                  "textGrowth": "fixed-width",
+                  "width": 800,
+                  "content": "Let's find the handoff that's holding your business back.",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$heading",
+                  "fontSize": 40,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "hK7QI",
+                  "name": "Invitation description",
+                  "fill": "#E0F0F2",
+                  "textGrowth": "fixed-width",
+                  "width": 790,
+                  "content": "Tell us how inquiries arrive, where they stall, and what you want the system to do better.",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 17
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bO743",
+              "name": "Invitation action",
+              "width": 290,
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Ex3f3",
+                  "name": "Final strategy call button",
+                  "fill": "$signal",
+                  "cornerRadius": 4,
+                  "padding": [
+                    17,
+                    22
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qkS7K",
+                      "name": "Final CTA label",
+                      "fill": "$ink",
+                      "content": "Book a strategy call  ↗",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$body",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "ASivt",
+                  "name": "Written alternative",
+                  "fill": "$white",
+                  "textGrowth": "fixed-width",
+                  "width": 290,
+                  "content": "Prefer to write? Send an inquiry  ↗",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "kVd7W",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "$ink",
+          "padding": [
+            54,
+            68
+          ],
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "frame",
+              "id": "B6Vwo",
+              "name": "Footer brand",
+              "width": 410,
+              "layout": "vertical",
+              "gap": 13,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "PLisD",
+                  "name": "Footer True Webmaster logo",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "true-webmaster-logo.webp",
+                    "mode": "fit"
+                  },
+                  "width": 180,
+                  "height": 42
+                },
+                {
+                  "type": "text",
+                  "id": "TTV1u",
+                  "name": "Footer positioning",
+                  "fill": "#C5D8DB",
+                  "textGrowth": "fixed-width",
+                  "width": 400,
+                  "content": "Managed digital operations for service businesses.",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "W63bEw",
+              "name": "Footer navigation",
+              "width": 200,
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "EFxkZ",
+                  "name": "Footer Solutions",
+                  "fill": "$white",
+                  "content": "Solutions",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "I2wQj",
+                  "name": "Footer How it works",
+                  "fill": "$white",
+                  "content": "How it works",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "MiZJA",
+                  "name": "Footer Results",
+                  "fill": "$white",
+                  "content": "Results",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "Q2gg0i",
+                  "name": "Footer About",
+                  "fill": "$white",
+                  "content": "About",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MwZla",
+              "name": "Footer contact",
+              "width": 235,
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "zaqI9",
+                  "name": "Footer location",
+                  "fill": "$white",
+                  "content": "Tampa, FL",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "ujcvJ",
+                  "name": "Footer language",
+                  "fill": "#A5C8CE",
+                  "content": "English  /  Español",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "clIeq",
+                  "name": "Footer contact link",
+                  "fill": "$signal",
+                  "content": "Start a conversation  ↗",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "ink": {
+      "type": "color",
+      "value": "#111A27"
+    },
+    "inkSoft": {
+      "type": "color",
+      "value": "#1A2B3A"
+    },
+    "teal": {
+      "type": "color",
+      "value": "#086B83"
+    },
+    "tealDeep": {
+      "type": "color",
+      "value": "#075B73"
+    },
+    "seaMist": {
+      "type": "color",
+      "value": "#A8DDE3"
+    },
+    "paper": {
+      "type": "color",
+      "value": "#F3F6F8"
+    },
+    "white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "text": {
+      "type": "color",
+      "value": "#21313A"
+    },
+    "muted": {
+      "type": "color",
+      "value": "#46595F"
+    },
+    "rule": {
+      "type": "color",
+      "value": "#D3DCD7"
+    },
+    "heading": {
+      "type": "string",
+      "value": "Outfit"
+    },
+    "body": {
+      "type": "string",
+      "value": "DM Sans"
+    },
+    "signal": {
+      "type": "color",
+      "value": "#17A2B8"
+    },
+    "aqua": {
+      "type": "color",
+      "value": "#A8DDE3"
+    },
+    "coastalBlue": {
+      "type": "color",
+      "value": "#125C74"
+    }
+  },
+  "fileToken": "1a303ba0-5c71-4489-b81c-0ffda382545e"
+}

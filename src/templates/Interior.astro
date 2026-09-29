@@ -1,0 +1,111 @@
+---
+import Base from "../layouts/Base.astro";
+import { text, href, labels, type Locale, type PageId } from "../lib/routes";
+import { pages, local, faqs } from "../lib/content";
+import Current from "../components/Current.astro";
+import Journey from "../components/Journey.astro";
+import SolutionsList from "../components/SolutionsList.astro";
+import ProcessList from "../components/ProcessList.astro";
+import ProjectShowcase from "../components/ProjectShowcase.astro";
+import Cta from "../components/Cta.astro";
+import ContactForm from "../components/ContactForm.astro";
+interface Props {
+  locale: Locale;
+  page: Exclude<PageId, "home">;
+}
+const { locale, page } = Astro.props;
+const content = pages[page];
+const title = `${labels[page][locale]} — True Webmaster`;
+const utility = page === "privacy" || page === "confirmation";
+---
+
+<Base
+  locale={locale}
+  page={page}
+  title={title}
+  description={local(content.intro, locale)}
+  noindex={utility}
+>
+  <section class="interior-hero">
+    <Current />
+    <div class="container">
+      <nav
+        class="breadcrumbs"
+        aria-label={text(locale, "Breadcrumbs", "Ruta de navegación")}
+      >
+        <a href={href("home", locale)}>{labels.home[locale]}</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">{labels[page][locale]}</span>
+      </nav>
+      <h1>{local(content.title, locale)}</h1>
+      <p>{local(content.intro, locale)}</p>
+    </div>
+  </section>
+  {page === "solutions" && (
+    <section class="section system-section">
+      <div class="container">
+        <Journey locale={locale} />
+        <SolutionsList locale={locale} />
+        <p class="scope-note">
+          {text(
+            locale,
+            "These are connected starting points. Scope, integrations, and ongoing responsibilities are agreed for each business.",
+            "Son puntos de partida conectados. El alcance, las integraciones y las responsabilidades se acuerdan para cada negocio.",
+          )}
+        </p>
+      </div>
+    </section>
+  )}
+  {page === "process" && (
+    <section class="section">
+      <div class="container reading-width">
+        <ProcessList locale={locale} />
+      </div>
+    </section>
+  )}
+  {page === "crm" && (
+    <section class="section system-section">
+      <div class="container">
+        <Journey locale={locale} />
+      </div>
+    </section>
+  )}
+  {content.sections.length > 0 && (
+    <section class="section interior-content">
+      <div class="container">
+        <div class="content-sections">
+          {content.sections.map((section, i) => (
+            <section class="content-row">
+              <span class="content-marker" aria-hidden="true">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div>
+                <h2>{local(section.title, locale)}</h2>
+                <p>{local(section.body, locale)}</p>
+              </div>
+            </section>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+  {page === "work" && <ProjectShowcase locale={locale} standalone />}
+  {page === "websites" && <ProjectShowcase locale={locale} />}
+  {page === "contact" && <ContactForm locale={locale} />}
+  {(page === "solutions" || page === "process") && (
+    <section class="section faq-section">
+      <div class="container reading-width">
+        <h2>
+          {text(locale, "A few useful questions.", "Algunas preguntas útiles.")}
+        </h2>
+        {faqs.map((faq) => (
+          <details>
+            <summary>{local(faq.title, locale)}</summary>
+            <p>{local(faq.body, locale)}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  )}
+  {!utility && page !== "contact" && <Cta locale={locale} />}
+</Base>

@@ -1,0 +1,161 @@
+---
+import { text, href, type Locale } from "../lib/routes";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const endpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT;
+const configured = Boolean(endpoint);
+---
+
+<section class="section" id="inquiry">
+  <div class="container contact-layout">
+    <div>
+      <p class="eyebrow">
+        {text(locale, "A practical first step", "Un primer paso útil")}
+      </p>
+      <h2>
+        {text(
+          locale,
+          "Tell us where the work gets stuck.",
+          "Cuéntanos dónde se frena el trabajo.",
+        )}
+      </h2>
+      <p>
+        {text(
+          locale,
+          "A website, a missed inquiry, an unclear next step. Start with the part you want to improve.",
+          "Un sitio web, una consulta sin atender, un próximo paso incierto. Empieza por lo que quieres mejorar.",
+        )}
+      </p>
+      <p class="contact-notice">
+        {text(
+          locale,
+          "The contact service is not active in this preview. This form shows the planned experience and does not send or store your information.",
+          "El servicio de contacto no está activo en esta vista previa. Este formulario muestra la experiencia prevista y no envía ni guarda tu información.",
+        )}
+      </p>
+    </div>
+    <form
+      action={configured ? endpoint : undefined}
+      method="post"
+      data-inquiry-form
+      data-configured={String(configured)}
+    >
+      <div class="form-grid">
+        <label>
+          {text(locale, "Name", "Nombre")}
+          <input name="name" autocomplete="name" maxlength="100" required />
+        </label>
+        <label>
+          {text(locale, "Business name", "Nombre del negocio")}
+          <input
+            name="business"
+            autocomplete="organization"
+            maxlength="160"
+            required
+          />
+        </label>
+        <label class="full-width">
+          {text(locale, "Email", "Correo electrónico")}
+          <input
+            name="email"
+            type="email"
+            autocomplete="email"
+            spellcheck="false"
+            required
+          />
+        </label>
+        <label class="full-width">
+          {text(locale, "Website (optional)", "Sitio web (opcional)")}
+          <input
+            name="website"
+            type="url"
+            autocomplete="url"
+            placeholder="https://…"
+          />
+        </label>
+        <label class="full-width">
+          {text(
+            locale,
+            "What would you like to improve?",
+            "¿Qué te gustaría mejorar?",
+          )}
+          <textarea
+            name="challenge"
+            rows="5"
+            maxlength="1500"
+            required
+            aria-describedby="sensitive-data"
+          ></textarea>
+          <span id="sensitive-data" class="field-hint">
+            {text(
+              locale,
+              "Please do not include sensitive or customer information.",
+              "No incluyas información sensible ni datos de clientes.",
+            )}
+          </span>
+        </label>
+        <label>
+          {text(locale, "Preferred language", "Idioma preferido")}
+          <select name="locale">
+            <option value="en" selected={locale === "en"}>
+              English
+            </option>
+            <option value="es" selected={locale === "es"}>
+              Español
+            </option>
+          </select>
+        </label>
+        <label>
+          {text(locale, "Preferred contact", "Medio de contacto preferido")}
+          <select name="channel">
+            <option value="email">
+              {text(locale, "Email", "Correo electrónico")}
+            </option>
+            <option value="phone">
+              {text(locale, "Phone call", "Llamada")}
+            </option>
+          </select>
+        </label>
+        <label class="full-width">
+          {text(locale, "Phone (optional)", "Teléfono (opcional)")}
+          <input type="tel" name="phone" autocomplete="tel" />
+        </label>
+      </div>
+      <p class="field-hint">
+        {text(
+          locale,
+          "Sending an inquiry does not reserve a call.",
+          "Enviar una consulta no reserva una llamada.",
+        )}{" "}
+        <a href={href("privacy", locale)}>
+          {text(locale, "Privacy", "Privacidad")}
+        </a>
+      </p>
+      <button class="button" type="submit" disabled={!configured}>
+        {text(
+          locale,
+          configured ? "Send inquiry" : "Contact will be available at launch",
+          configured ? "Envía tu consulta" : "Contacto disponible al lanzar",
+        )}
+      </button>
+      <p role="status" class="form-status"></p>
+    </form>
+  </div>
+</section>
+<script>
+  document
+    .querySelectorAll<HTMLFormElement>("[data-inquiry-form]")
+    .forEach((form) => {
+      form.addEventListener("submit", (event) => {
+        if (form.dataset.configured !== "true") event.preventDefault();
+      });
+      const channel =
+        form.querySelector<HTMLSelectElement>('[name="channel"]')!;
+      const phone = form.querySelector<HTMLInputElement>('[name="phone"]')!;
+      channel.addEventListener("change", () => {
+        phone.required = channel.value === "phone";
+      });
+    });
+</script>

@@ -1,0 +1,20 @@
+---
+import { routes, type PageId, type Locale } from "../lib/routes";
+import Home from "../templates/Home.astro";
+import Interior from "../templates/Interior.astro";
+export function getStaticPaths() {
+  return Object.entries(routes).flatMap(([page, urls]) =>
+    Object.entries(urls).map(([locale, url]) => ({
+      params: { path: url === "/" ? undefined : url.replace(/^\/|\/$/g, "") },
+      props: { locale: locale as Locale, page: page as PageId },
+    })),
+  );
+}
+const { locale, page } = Astro.props;
+---
+
+{page === "home" ? (
+  <Home locale={locale} />
+) : (
+  <Interior locale={locale} page={page} />
+)}

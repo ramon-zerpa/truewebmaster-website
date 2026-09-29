@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+.vercel/
+.env
+.env.*
+!.env.example
+artifacts/
+pencil-design/capture-profile-roofing/
+*.log
+
+.vercel

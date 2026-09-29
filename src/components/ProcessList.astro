@@ -1,0 +1,25 @@
+---
+import { process, local } from "../lib/content";
+import type { Locale } from "../lib/routes";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+---
+
+<h2 class="sr-only">
+  {locale === "en"
+    ? "Five steps of the partnership"
+    : "Cinco etapas de la relación"}
+</h2>
+<ol class="editorial-list process-list">
+  {process.map((item, i) => (
+    <li>
+      <span class="row-number">{String(i + 1).padStart(2, "0")}</span>
+      <div>
+        <h3>{local(item.title, locale)}</h3>
+        <p>{local(item.summary, locale)}</p>
+      </div>
+    </li>
+  ))}
+</ol>

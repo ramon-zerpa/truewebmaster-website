@@ -1,0 +1,42 @@
+---
+import { journey, local } from "../lib/content";
+import { text, type Locale } from "../lib/routes";
+interface Props {
+  locale: Locale;
+  hero?: boolean;
+}
+const { locale, hero = false } = Astro.props;
+---
+
+<div class:list={["journey-wrap", { "hero-journey": hero }]}>
+  <h2 class="sr-only">
+    {text(
+      locale,
+      "The connected customer journey",
+      "El recorrido conectado del cliente",
+    )}
+  </h2>
+  {hero && (
+    <div class="journey-caption">
+      <span>
+        {text(locale, "One connected journey", "Un recorrido conectado")}
+      </span>
+      <span>
+        {text(
+          locale,
+          "Operated, not just built",
+          "Administrado, no solo construido",
+        )}
+      </span>
+    </div>
+  )}
+  <ol class="journey">
+    {journey.map((stage, index) => (
+      <li class:list={{ "signal-stage": index === 2 }}>
+        <span class="stage-index">{String(index + 1).padStart(2, "0")}</span>
+        <h3>{local(hero ? stage.hero : stage.title, locale)}</h3>
+        <p>{local(stage.detail, locale)}</p>
+      </li>
+    ))}
+  </ol>
+</div>

@@ -1,0 +1,41 @@
+[
+  {
+    "file": "public/images/true-webmaster-logo.webp",
+    "source": "pencil-design/true-webmaster-logo.webp",
+    "hash": "73bd8fff0ac76f276eb77ef518f58a958b0f213ada2e8bd147d5155fd5fd8308",
+    "format": "webp",
+    "mediaType": "image/webp",
+    "size": 5010,
+    "width": 289,
+    "height": 67,
+    "space": "srgb",
+    "channels": 4,
+    "depth": "uchar",
+    "isProgressive": false,
+    "isPalette": false,
+    "hasProfile": false,
+    "hasAlpha": true,
+    "autoOrient": {
+      "width": 289,
+      "height": 67
+    }
+  },
+  {
+    "source": "pencil-design/assets/affordable-roofing-full.png",
+    "project": "affordable-roofing",
+    "derivatives": [
+      "affordable-roofing-preview.webp",
+      "affordable-roofing-static.webp"
+    ],
+    "permission": "client-approval-confirmed-by-owner-in-chat-2026-09-29"
+  },
+  {
+    "source": "pencil-design/assets/palm-wellness-full.png",
+    "project": "palm-wellness",
+    "derivatives": [
+      "palm-wellness-preview.webp",
+      "palm-wellness-static.webp"
+    ],
+    "permission": "client-approval-confirmed-by-owner-in-chat-2026-09-29"
+  }
+]

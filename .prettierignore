@@ -1,0 +1,6 @@
+pencil-design/
+dist/
+node_modules/
+.astro/
+artifacts/
+public/

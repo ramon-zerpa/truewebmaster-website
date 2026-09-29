@@ -1,0 +1,53 @@
+---
+import { primaryCta } from "../lib/content";
+import { href, text, type Locale } from "../lib/routes";
+import Current from "./Current.astro";
+import Arrow from "./Arrow.astro";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+---
+
+<section class="cta-section">
+  <Current />
+  <div class="container cta-layout">
+    <div>
+      <p class="eyebrow">
+        {text(
+          locale,
+          "A practical first conversation",
+          "Una primera conversación útil",
+        )}
+      </p>
+      <h2>
+        {text(
+          locale,
+          "Let’s find the handoff that’s holding your business back.",
+          "Identifiquemos el paso que está frenando a tu negocio.",
+        )}
+      </h2>
+      <p>
+        {text(
+          locale,
+          "Tell us how inquiries arrive, where they stall, and what you want the system to do better.",
+          "Cuéntanos cómo llegan las consultas, dónde se frenan y qué quieres mejorar.",
+        )}
+      </p>
+    </div>
+    <div class="cta-actions">
+      <a class="button" href={href("contact", locale)}>
+        {primaryCta(locale)}
+        <Arrow />
+      </a>
+      <a class="quiet-link" href={`${href("contact", locale)}#inquiry`}>
+        {text(
+          locale,
+          "Prefer to write? Send an inquiry",
+          "¿Prefieres escribir? Envía una consulta",
+        )}
+        <Arrow />
+      </a>
+    </div>
+  </div>
+</section>
