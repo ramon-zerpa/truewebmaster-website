@@ -39,4 +39,6 @@ Environment names are in `.env.example`. `npm run release:check` deliberately fa
 
 ## Assets
 
+Hero art direction, tunable parameters and renderer safeguards are documented in [docs/hero-animation.md](docs/hero-animation.md). `node scripts/hero-flow-check.mjs` checks the effect and forced fallback paths. Regenerate its static poster with `node scripts/prepare-hero-poster.mjs` using Node 24 after changing the preset.
+
 `scripts/prepare-assets.mjs` copies the immutable logo, self-hosts licensed Outfit 700 and DM Sans, and creates WebP crops and desktop preview excerpts. Provenance is in `docs/asset-provenance.json`. Only `public/` and built assets ship. `pencil-design/` and the temporary browser profile do not ship; the profile is excluded from Git.

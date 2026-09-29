@@ -91,7 +91,11 @@ for (const width of [320, 390, 768, 1440]) {
       "artifacts/browser-report.json",
       JSON.stringify({ base, isolatedTransport, results }, null, 2),
     );
-    if (["/", "/es/"].includes(pathname) && [390, 1440].includes(width)) {
+    if (
+      process.env.TEST_SKIP_SCREENSHOTS !== "true" &&
+      ["/", "/es/"].includes(pathname) &&
+      [390, 1440].includes(width)
+    ) {
       await page.locator("#selected-work").scrollIntoViewIfNeeded();
       await page.locator("#palm-wellness").scrollIntoViewIfNeeded();
       await page.evaluate(() => window.scrollTo(0, 0));
@@ -112,41 +116,15 @@ const context = await browser.newContext({
 const page = await context.newPage();
 await isolate(context);
 await page.goto(`${base}/`);
-const waves = page.locator("[data-hero-waves]");
-const layer = waves.locator(".wave-layer").first();
-const waveTransform = () =>
-  layer.evaluate((el) => getComputedStyle(el).transform);
-const initialWave = await waveTransform();
-await page.waitForTimeout(450);
-const wavesMove = initialWave !== (await waveTransform());
-await page.getByRole("button", { name: "Pause waves", exact: true }).click();
-const stoppedWave = await waveTransform();
-await page.waitForTimeout(200);
-const wavesPause =
-  stoppedWave === (await waveTransform()) &&
-  !(await waves.evaluate((el) => el.hasAttribute("data-running")));
-await page.getByRole("button", { name: "Play waves", exact: true }).click();
-const wavesResume = await waves.evaluate((el) =>
-  el.hasAttribute("data-running"),
-);
 const controls = page.locator(".preview-controls").first();
 await controls.getByRole("button", { name: /Play preview/ }).click();
 await page.waitForTimeout(1000);
 await controls.getByRole("button", { name: /Pause preview/ }).click();
-const wavesOffscreen = !(await waves.evaluate((el) =>
-  el.hasAttribute("data-running"),
-));
 const paused = await page
   .locator(".preview-viewport img")
   .first()
   .evaluate((img) => img.getAnimations()[0]?.playState);
 await page.emulateMedia({ reducedMotion: "reduce" });
-const wavesReduced = await layer.evaluate(
-  (el) => getComputedStyle(el).animationName === "none",
-);
-const waveButtonReduced = !(await page
-  .locator("[data-wave-toggle]")
-  .isVisible());
 const reducedControls = await controls.isVisible();
 const reducedTransform = await page
   .locator(".preview-viewport img")
@@ -168,19 +146,9 @@ await isolate(nojs);
 await nojsPage.goto(`${base}/es/`);
 await nojsPage.getByText("Menú", { exact: true }).click();
 const noJsMenu = await nojsPage.locator(".mobile-menu nav").isVisible();
-const noJsWaves = !(await nojsPage
-  .locator("[data-hero-waves]")
-  .evaluate((el) => el.hasAttribute("data-running")));
 await nojs.close();
 await browser.close();
 const interactions = {
-  wavesMove,
-  wavesPause,
-  wavesResume,
-  wavesOffscreen,
-  wavesReduced,
-  waveButtonReduced,
-  noJsWaves,
   paused,
   reducedControls,
   reducedTransform,
@@ -200,13 +168,6 @@ console.log(
 );
 if (
   failed.length ||
-  !wavesMove ||
-  !wavesPause ||
-  !wavesResume ||
-  !wavesOffscreen ||
-  !wavesReduced ||
-  !waveButtonReduced ||
-  !noJsWaves ||
   paused !== "paused" ||
   reducedControls ||
   reducedTransform !== "none" ||
