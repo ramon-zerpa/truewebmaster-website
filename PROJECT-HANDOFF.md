@@ -30,7 +30,7 @@ Trabajar en `C:\Users\raymo\Downloads\truewebmaster-website`. Leer `AGENTS.md`, 
 - **Color:** base azul profundo y turquesa, con metáfora abstracta de corriente. MIST `#A8DDE3` solo en la franja bajo el hero. Las secciones claras de sistema y proyectos usan `#F3F6F8`. Sin beige ni lima dominante; CTA final azul profundo.
 - **Tipografía:** Outfit **700** para títulos; DM Sans para párrafos y texto de interfaz. Las alternativas Space Grotesk y Manrope se probaron y descartaron para esta dirección.
 - **Home:** en inglés y desktop, con la secuencia posición → problema → sistema → soluciones → diferenciación → prueba → proceso → conversión. El hero plantea “Your business has enough tools. What it needs is one system.”
-- **Movimiento futuro:** dar vida al hero, las conexiones/handoffs y ciertas interacciones sin ocultar información en reposo. Respetar movimiento reducido y rendimiento.
+- **Movimiento:** por corrección posterior del propietario, el hero EN/ES ya tiene fondo continuo de ondas SVG/CSS con pausa y alternativa estática. El detalle está en `docs/implementation-status.md`. Conexiones/handoffs adicionales siguen sujetos a revisión; no ocultar información en reposo.
 - **Proyectos en Home:** dos casos editoriales apilados, con una captura real grande junto a contexto breve. No mostrar etiquetas que sugieran servicios consumidos por el cliente como “Website + Search”. La captura recortada debe desplazarse al hacer hover en desktop, siguiendo como referencia la Home legacy. Pencil solo representa el estado inicial.
 
 ## 4. Artefactos y URLs

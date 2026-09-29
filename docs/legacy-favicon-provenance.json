@@ -1,0 +1,23 @@
+{
+  "retrievedAt": "2026-09-29T20:59:37.633Z",
+  "assets": [
+    {
+      "source": "https://www.truewebmaster.com/favicon.ico",
+      "file": "public/favicon.ico",
+      "bytes": 1031,
+      "sha256": "df9281309318993729f7c655551e802d11024b64efcac2b405adaf62c75a6cb6"
+    },
+    {
+      "source": "https://www.truewebmaster.com/images/cropped-True-Webmaster-Favicon-White-min-192x192.webp",
+      "file": "public/images/cropped-True-Webmaster-Favicon-White-min-192x192.webp",
+      "bytes": 3014,
+      "sha256": "25f8d712eaca8a4feeaaef509abe6225775987027b6610b03b43f1346b7ebb3e"
+    },
+    {
+      "source": "https://www.truewebmaster.com/images/cropped-True-Webmaster-Favicon-White-min-180x180.webp",
+      "file": "public/images/cropped-True-Webmaster-Favicon-White-min-180x180.webp",
+      "bytes": 3060,
+      "sha256": "6bb99aec1385b790fbfce1cfc260590c521bccaf4f727641074299c5e53554cb"
+    }
+  ]
+}

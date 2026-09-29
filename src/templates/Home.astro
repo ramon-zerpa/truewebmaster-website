@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 import { href, text, type Locale } from "../lib/routes";
 import { primaryCta } from "../lib/content";
 import Arrow from "../components/Arrow.astro";
-import Current from "../components/Current.astro";
+import HeroWaves from "../components/HeroWaves.astro";
 import Journey from "../components/Journey.astro";
 import SolutionsList from "../components/SolutionsList.astro";
 import ProcessList from "../components/ProcessList.astro";
@@ -83,7 +83,7 @@ const pillars = [
 
 <Base locale={locale} page="home" title={title} description={description}>
   <section class="hero">
-    <Current />
+    <HeroWaves locale={locale} />
     <div class="container">
       <div class="hero-message">
         <p class="eyebrow">
