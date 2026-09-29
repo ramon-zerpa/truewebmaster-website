@@ -34,17 +34,6 @@ const vars = `--stage-transition:${c.transitionMs}ms;--stage-contrast:${c.active
           "Administrado, no solo construido",
         )}
       </span>
-      <button
-        type="button"
-        class="sequence-toggle"
-        data-sequence-toggle
-        hidden
-        aria-pressed="false"
-        data-pause={text(locale, "Pause sequence", "Pausar secuencia")}
-        data-play={text(locale, "Play sequence", "Activar secuencia")}
-      >
-        {text(locale, "Pause sequence", "Pausar secuencia")}
-      </button>
     </div>
   </div>
   <div class="stage-group">
@@ -85,20 +74,6 @@ const vars = `--stage-transition:${c.transitionMs}ms;--stage-contrast:${c.active
     display: flex;
     align-items: center;
     gap: 20px;
-  }
-  .sequence-toggle {
-    background: transparent;
-    border: 1px solid #608b9d;
-    color: #d3e8ee;
-    min-height: 44px;
-    padding: 8px 12px;
-    border-radius: 3px;
-    font-size: 0.6875rem;
-    text-transform: none;
-    white-space: nowrap;
-  }
-  .sequence-toggle:hover {
-    background: #1a3443;
   }
   .stage-group {
     position: relative;
@@ -212,10 +187,6 @@ const vars = `--stage-transition:${c.transitionMs}ms;--stage-contrast:${c.active
     .journey-caption {
       align-items: center;
       gap: 14px;
-    }
-    .sequence-toggle {
-      font-size: 0.625rem;
-      padding: 6px 8px;
     }
     .hero-journey[data-enhanced] .handoff-rail {
       top: 0;

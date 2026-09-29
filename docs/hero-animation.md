@@ -25,15 +25,15 @@ El componente admite `config` como override parcial; la Home utiliza el preset c
 - Objetivo de dibujo: 30 fps desktop, 24 en puntero táctil, 18 en Canvas. Es un límite, no una garantía de rendimiento medido en todos los dispositivos.
 - Adaptación ante pérdida sostenida de presupuesto de frames: reducir resolución/frecuencia, pasar de WebGL a Canvas o bajar Canvas a 12 fps. Sin lecturas síncronas de GPU en producción.
 - Un buffer de geometría, uniformes cacheados y coordenadas/materiales preasignados en Canvas; sin asignaciones grandes por frame. El gradiente de lectura de Canvas es pequeño y acotado.
-- Detener RAF al salir el hero de pantalla, ocultarse la pestaña, pausar manualmente o activar reduced motion. El tiempo se conserva para reanudar sin salto.
+- Detener RAF al salir el hero de pantalla, ocultarse la pestaña, activar reduced motion. El tiempo se conserva para reanudar sin salto.
 - Reduced motion desde el inicio evita cargar el renderer y muestra el poster; al activar la preferencia durante la sesión congela el frame. Sin JS hay atmósfera estática y contenido completo.
-- Control de pausa EN/ES, teclado, foco visible y objetivo mínimo 44 px. Canvas es decorativo y está fuera del árbol accesible. El contraste y la información pertenecen al HTML.
+- Por decisión del propietario del 29/09/2026, no hay control de pausa visible ni lógica de pausa manual. Canvas es decorativo y está fuera del árbol accesible. El contraste y la información pertenecen al HTML.
 - Error de importación, shader incompatible y pérdida de contexto tienen degradación segura. Resize y salida de página liberan recursos/listeners propios cuando corresponde.
 
 Referencia técnica contrastada: [MDN WebGL best practices](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_best_practices) y [Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API).
 
 ## Validación
 
-`node scripts/hero-flow-check.mjs` comprueba WebGL EN desktop/ES móvil, movimiento efectivo mediante imágenes distintas, pausa/reanudación, presupuesto de píxeles, offscreen, reduced motion y recuperación de contexto. Fuerza fallos de WebGL y Canvas para comprobar ambas alternativas; verifica poster y control oculto sin JS/reduced motion. Incluye reglas automáticas de contraste, nombre del control y encabezados del hero. Usa respuestas originales del build mediante transporte Node para evitar la inyección externa del navegador documentada en el handoff.
+`node scripts/hero-flow-check.mjs` comprueba WebGL EN desktop/ES móvil, movimiento efectivo mediante imágenes distintas, ausencia de controles, H1 estático, presupuesto de píxeles, offscreen, reduced motion y recuperación de contexto. Fuerza fallos de WebGL y Canvas para comprobar ambas alternativas; verifica poster sin JS/reduced motion. Incluye reglas automáticas de contraste, nombres de botones restantes y encabezados del hero. Usa respuestas originales del build mediante transporte Node para evitar la inyección externa del navegador documentada en el handoff.
 
 `scripts/browser-check.mjs` conserva las pruebas generales responsive, menú y showcase. Los informes/capturas quedan en `artifacts/`, excluidos de Git. Estas pruebas funcionales no certifican LCP, CWV de campo ni rendimiento de hardware físico; la medición en un navegador limpio y dispositivos reales sigue siendo un requisito de release.

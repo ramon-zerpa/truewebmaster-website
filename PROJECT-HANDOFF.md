@@ -30,9 +30,12 @@ Trabajar en `C:\Users\raymo\Downloads\truewebmaster-website`. Leer `AGENTS.md`, 
 - **Color:** base azul profundo y turquesa, con metáfora abstracta de corriente. MIST `#A8DDE3` solo en la franja bajo el hero. Las secciones claras de sistema y proyectos usan `#F3F6F8`. Sin beige ni lima dominante; CTA final azul profundo.
 - **Tipografía:** Outfit **700** para títulos; DM Sans para párrafos y texto de interfaz. Las alternativas Space Grotesk y Manrope se probaron y descartaron para esta dirección.
 - **Home:** en inglés y desktop, con la secuencia posición → problema → sistema → soluciones → diferenciación → prueba → proceso → conversión. El hero plantea “Your business has enough tools. What it needs is one system.”
-- **Movimiento:** la última corrección del propietario sustituye las ondas SVG por un campo satinado WebGL con deformación de dominio, fallback Canvas 2D, pausa y composición estática. Ver `docs/hero-animation.md` y `docs/implementation-status.md`. Conexiones/handoffs adicionales siguen sujetos a revisión; no ocultar información en reposo.
-- **Cards del hero:** secuencia activa de las cinco etapas, spotlight hover/focus y micro-tilt mínimo en desktop, según el segundo briefing del propietario. Ver `docs/hero-cards.md`. Las cinco etapas permanecen visibles; pausa y reduced motion preservan el contenido.
+- **Movimiento:** la última corrección del propietario sustituye las ondas SVG por un campo satinado WebGL con deformación de dominio, fallback Canvas 2D y composición estática; los dos botones de pausa del hero fueron retirados por solicitud posterior del propietario. Ver `docs/hero-animation.md` y `docs/implementation-status.md`. Conexiones/handoffs adicionales siguen sujetos a revisión; no ocultar información en reposo.
+- **Cards del hero:** secuencia activa de las cinco etapas, spotlight hover/focus y micro-tilt mínimo en desktop, según el segundo briefing del propietario. Ver `docs/hero-cards.md`. Las cinco etapas permanecen visibles; hover/foco suspenden autoplay y reduced motion preserva el contenido.
 - **Proyectos en Home:** dos casos editoriales apilados, con una captura real grande junto a contexto breve. No mostrar etiquetas que sugieran servicios consumidos por el cliente como “Website + Search”. La captura recortada debe desplazarse al hacer hover en desktop, siguiendo como referencia la Home legacy. Pencil solo representa el estado inicial.
+
+- **H1 del hero:** estático original EN/ES. La animación de reveal fue rechazada y retirada el 29/09/2026. Ver `docs/hero-headline.md`.
+- **Continuidad:** esta sesión concluye con la reversión del H1, retirada de controles y actualización del repositorio. Esperar la siguiente solicitud del propietario; los briefs de animación anteriores no deben reintroducir estos elementos.
 
 ## 4. Artefactos y URLs
 

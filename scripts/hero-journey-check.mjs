@@ -61,18 +61,9 @@ await page.waitForFunction(
   { timeout: 4500 },
 );
 const resume = true;
-await root.locator("[data-sequence-toggle]").click();
-const stopped = await root.getAttribute("data-active-stage");
-await page.waitForTimeout(3900);
-const pause =
-  stopped === (await root.getAttribute("data-active-stage")) &&
-  !(await root.evaluate((e) => e.hasAttribute("data-running")));
-await root.locator("[data-sequence-toggle]").click();
-await page.locator("[data-flow-toggle]").click();
-const heroPause =
-  !(await root.evaluate((e) => e.hasAttribute("data-running"))) &&
-  (await root.locator("[data-sequence-toggle]").isDisabled());
-await page.locator("[data-flow-toggle]").click();
+const controlsRemoved =
+  (await page.locator("[data-sequence-toggle], [data-flow-toggle]").count()) ===
+  0;
 await page.evaluate(() => scrollTo(0, 0));
 await page.screenshot({ path: "artifacts/journey-en-desktop.png" });
 const axe = await new AxeBuilder({ page })
@@ -89,8 +80,7 @@ results.push({
   focusWins,
   focusHolds,
   resume,
-  pause,
-  heroPause,
+  controlsRemoved,
   offscreen,
   errors,
   violations: axe.violations.map((v) => v.id),

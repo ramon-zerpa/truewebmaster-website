@@ -209,8 +209,7 @@ function canvas2d(canvas: HTMLCanvasElement, c: FlowConfig): Renderer | null {
 
 export function mountHeroFlow(root: HTMLElement) {
   const config: FlowConfig = JSON.parse(root.dataset.flowConfig!);
-  const hero = root.parentElement!,
-    button = hero.querySelector<HTMLButtonElement>("[data-flow-toggle]")!;
+  const hero = root.parentElement!;
   let canvas = root.querySelector<HTMLCanvasElement>("canvas")!;
   const reduced = matchMedia("(prefers-reduced-motion: reduce)");
   const coarse = matchMedia("(pointer: coarse)");
@@ -224,7 +223,6 @@ export function mountHeroFlow(root: HTMLElement) {
   let renderer: Renderer | null = null,
     kind = "static",
     visible = true,
-    paused = false,
     dead = false,
     raf = 0,
     time = 0,
@@ -278,7 +276,6 @@ export function mountHeroFlow(root: HTMLElement) {
     } else {
       stop();
       root.removeAttribute("data-ready");
-      button.hidden = true;
     }
   };
   if (!lowBudget) {
@@ -340,15 +337,7 @@ export function mountHeroFlow(root: HTMLElement) {
   };
   function update() {
     const run =
-      !dead &&
-      !!renderer &&
-      visible &&
-      !paused &&
-      !document.hidden &&
-      !reduced.matches;
-    button.hidden = !renderer || reduced.matches;
-    button.setAttribute("aria-pressed", String(paused));
-    button.textContent = paused ? button.dataset.play! : button.dataset.pause!;
+      !dead && !!renderer && visible && !document.hidden && !reduced.matches;
     if (run && !raf) {
       last = 0;
       drawAt = performance.now();
@@ -356,15 +345,8 @@ export function mountHeroFlow(root: HTMLElement) {
       raf = requestAnimationFrame(frame);
     } else if (!run) stop();
   }
-  const toggle = () => {
-    paused = !paused;
-    hero.dispatchEvent(
-      new CustomEvent("hero-motion-change", { detail: { paused } }),
-    );
-    update();
-  };
   const move = (e: PointerEvent) => {
-    if (coarse.matches || reduced.matches || paused) return;
+    if (coarse.matches || reduced.matches) return;
     const rect = hero.getBoundingClientRect();
     target.x = (e.clientX - rect.left) / rect.width;
     target.y = (e.clientY - rect.top) / rect.height;
@@ -373,7 +355,6 @@ export function mountHeroFlow(root: HTMLElement) {
   const leave = () => {
     target.intensity = 0;
   };
-  button.addEventListener("click", toggle);
   hero.addEventListener("pointermove", move, { passive: true });
   hero.addEventListener("pointerleave", leave);
   reduced.addEventListener("change", update);
@@ -391,7 +372,6 @@ export function mountHeroFlow(root: HTMLElement) {
     observer.disconnect();
     resizing.disconnect();
     renderer?.destroy();
-    button.removeEventListener("click", toggle);
     hero.removeEventListener("pointermove", move);
     hero.removeEventListener("pointerleave", leave);
     reduced.removeEventListener("change", update);

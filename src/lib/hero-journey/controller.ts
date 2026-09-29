@@ -7,17 +7,11 @@ export function mountHeroJourney(root: HTMLElement) {
   const controls = cards.map((c) =>
     c.querySelector<HTMLButtonElement>("[data-stage-control]")!,
   );
-  const toggle = root.querySelector<HTMLButtonElement>(
-    "[data-sequence-toggle]",
-  )!;
-  const hero = root.closest<HTMLElement>(".hero")!;
   const reduced = matchMedia("(prefers-reduced-motion: reduce)");
   const fine = matchMedia("(hover:hover) and (pointer:fine)");
   let active = reduced.matches ? 2 : 0,
     hover = -1,
     focused = -1,
-    paused = false,
-    heroPaused = false,
     visible = true,
     dead = false,
     timer = 0;
@@ -42,8 +36,6 @@ export function mountHeroJourney(root: HTMLElement) {
   };
   const permitted = () =>
     !dead &&
-    !paused &&
-    !heroPaused &&
     !document.hidden &&
     visible &&
     !reduced.matches &&
@@ -59,14 +51,7 @@ export function mountHeroJourney(root: HTMLElement) {
       schedule();
     }, delay);
   };
-  const update = () => {
-    toggle.hidden = reduced.matches;
-    toggle.disabled = heroPaused;
-    toggle.setAttribute("aria-pressed", String(paused || heroPaused));
-    toggle.textContent =
-      paused || heroPaused ? toggle.dataset.play! : toggle.dataset.pause!;
-    schedule();
-  };
+  const update = () => schedule();
   const interact = (index: number) => {
     clear();
     if (!reduced.matches || config.reducedMotionBehavior === "manual")
@@ -131,16 +116,6 @@ export function mountHeroJourney(root: HTMLElement) {
       }
     });
   });
-  toggle.addEventListener("click", () => {
-    paused = !paused;
-    update();
-  });
-  hero.addEventListener("hero-motion-change", ((
-    e: CustomEvent<{ paused: boolean }>,
-  ) => {
-    heroPaused = e.detail.paused;
-    update();
-  }) as EventListener);
   const observer = new IntersectionObserver(([entry]) => {
     visible = entry.isIntersecting;
     schedule();

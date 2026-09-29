@@ -58,24 +58,17 @@ for (const [width, locale] of [
   await page.waitForTimeout(600);
   const after = await canvas.screenshot();
   const moving = !before.equals(after);
-  await page
-    .getByRole("button", {
-      name: locale === "en" ? "Pause background" : "Pausar fondo",
-      exact: true,
-    })
-    .click();
-  const frozen = await canvas.screenshot();
-  await page.waitForTimeout(250);
-  const paused =
-    frozen.equals(await canvas.screenshot()) &&
-    !(await root.evaluate((e) => e.hasAttribute("data-running")));
-  await page
-    .getByRole("button", {
-      name: locale === "en" ? "Play background" : "Activar fondo",
-      exact: true,
-    })
-    .click();
-  const resumed = await root.evaluate((e) => e.hasAttribute("data-running"));
+  const controlsRemoved =
+    (await page
+      .locator("[data-flow-toggle], [data-sequence-toggle]")
+      .count()) === 0;
+  const staticH1 = await page
+    .locator("h1")
+    .evaluate(
+      (e) =>
+        getComputedStyle(e).opacity === "1" &&
+        e.getAnimations({ subtree: true }).length === 0,
+    );
   await page.evaluate(() => scrollTo(0, 0));
   await page.screenshot({ path: `artifacts/flow-hero-${locale}-${width}.png` });
   const axe = await new AxeBuilder({ page })
@@ -103,7 +96,7 @@ for (const [width, locale] of [
   await page.emulateMedia({ reducedMotion: "reduce" });
   const reduced =
     !(await root.evaluate((e) => e.hasAttribute("data-running"))) &&
-    !(await page.locator("[data-flow-toggle]").isVisible());
+    (await page.locator("[data-flow-toggle]").count()) === 0;
   results.push({
     width,
     locale,
@@ -112,8 +105,8 @@ for (const [width, locale] of [
     pixelBudget: pixels <= 730000,
     contextRecovery,
     moving,
-    paused,
-    resumed,
+    controlsRemoved,
+    staticH1,
     offscreen,
     reduced,
     overflow,
@@ -136,10 +129,6 @@ for (const mode of ["canvas2d", "static"]) {
           e.getBoundingClientRect().width,
       ) < 2,
   );
-  if (mode === "canvas2d")
-    await page
-      .getByRole("button", { name: "Pause background", exact: true })
-      .click();
   await page.screenshot({ path: `artifacts/flow-${mode}.png` });
   results.push({
     requested: mode,
@@ -167,7 +156,7 @@ for (const options of [
     poster: await root.evaluate((e) =>
       getComputedStyle(e).backgroundImage.includes("hero-flow-poster"),
     ),
-    controlHidden: !(await page.locator("[data-flow-toggle]").isVisible()),
+    controlsRemoved: (await page.locator("[data-flow-toggle]").count()) === 0,
   });
   await ctx.close();
 }
@@ -186,10 +175,9 @@ if (
       r.pixelBudget === false ||
       r.static === false ||
       r.poster === false ||
-      r.controlHidden === false ||
+      r.controlsRemoved === false ||
+      r.staticH1 === false ||
       r.moving === false ||
-      r.paused === false ||
-      r.resumed === false ||
       r.offscreen === false ||
       r.reduced === false ||
       r.overflow ||

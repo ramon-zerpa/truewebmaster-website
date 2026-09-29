@@ -1,11 +1,9 @@
 ---
-import { text, type Locale } from "../lib/routes";
 import { heroFlowConfig, type FlowConfig } from "../lib/hero-flow/config";
 interface Props {
-  locale: Locale;
   config?: Partial<FlowConfig>;
 }
-const { locale, config = {} } = Astro.props;
+const { config = {} } = Astro.props;
 const settings = {
   ...heroFlowConfig,
   ...config,
@@ -22,17 +20,6 @@ const settings = {
 >
   <canvas class="flow-canvas"></canvas>
 </div>
-<button
-  class="flow-toggle"
-  type="button"
-  data-flow-toggle
-  hidden
-  data-pause={text(locale, "Pause background", "Pausar fondo")}
-  data-play={text(locale, "Play background", "Activar fondo")}
-  aria-pressed="false"
->
-  {text(locale, "Pause background", "Pausar fondo")}
-</button>
 <style>
   .hero-flow {
     position: absolute;
@@ -54,38 +41,12 @@ const settings = {
   .hero-flow[data-ready] .flow-canvas {
     opacity: var(--flow-opacity);
   }
-  .flow-toggle {
-    position: absolute;
-    right: max(40px, calc((100vw - var(--max)) / 2));
-    bottom: 15px;
-    min-height: 44px;
-    padding: 8px 13px;
-    border: 1px solid #7394a6;
-    border-radius: 3px;
-    background: #111a27cc;
-    color: #d3e8ee;
-    font-size: 0.75rem;
-  }
-  .flow-toggle:hover {
-    background: var(--night);
-    color: white;
-  }
   @media (max-width: 767px) {
-    :global(.hero) {
-      padding-bottom: 64px;
-    }
-    .flow-toggle {
-      right: 20px;
-      bottom: 6px;
-    }
     .hero-flow {
       background-position: 65% center;
     }
   }
   @media (prefers-reduced-motion: reduce) {
-    .flow-toggle {
-      display: none;
-    }
     .flow-canvas {
       transition: none;
     }
