@@ -358,6 +358,9 @@ export function mountHeroFlow(root: HTMLElement) {
   }
   const toggle = () => {
     paused = !paused;
+    hero.dispatchEvent(
+      new CustomEvent("hero-motion-change", { detail: { paused } }),
+    );
     update();
   };
   const move = (e: PointerEvent) => {

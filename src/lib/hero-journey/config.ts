@@ -1,0 +1,15 @@
+export const heroJourneyConfig = {
+  autoplayMs: 3200,
+  handoffDelayMs: 500,
+  transitionMs: 650,
+  resumeDelayMs: 2200,
+  activeContrast: 1,
+  siblingOpacity: 0.94,
+  glowIntensity: 0.09,
+  borderEmphasis: 0.65,
+  activeScale: 1.006,
+  pulseMs: 1500,
+  spotlightIntensity: 0.2,
+  tiltDegrees: 0.65,
+  reducedMotionBehavior: "manual" as "manual" | "static",
+};

@@ -31,6 +31,7 @@ Trabajar en `C:\Users\raymo\Downloads\truewebmaster-website`. Leer `AGENTS.md`, 
 - **Tipografía:** Outfit **700** para títulos; DM Sans para párrafos y texto de interfaz. Las alternativas Space Grotesk y Manrope se probaron y descartaron para esta dirección.
 - **Home:** en inglés y desktop, con la secuencia posición → problema → sistema → soluciones → diferenciación → prueba → proceso → conversión. El hero plantea “Your business has enough tools. What it needs is one system.”
 - **Movimiento:** la última corrección del propietario sustituye las ondas SVG por un campo satinado WebGL con deformación de dominio, fallback Canvas 2D, pausa y composición estática. Ver `docs/hero-animation.md` y `docs/implementation-status.md`. Conexiones/handoffs adicionales siguen sujetos a revisión; no ocultar información en reposo.
+- **Cards del hero:** secuencia activa de las cinco etapas, spotlight hover/focus y micro-tilt mínimo en desktop, según el segundo briefing del propietario. Ver `docs/hero-cards.md`. Las cinco etapas permanecen visibles; pausa y reduced motion preservan el contenido.
 - **Proyectos en Home:** dos casos editoriales apilados, con una captura real grande junto a contexto breve. No mostrar etiquetas que sugieran servicios consumidos por el cliente como “Website + Search”. La captura recortada debe desplazarse al hacer hover en desktop, siguiendo como referencia la Home legacy. Pencil solo representa el estado inicial.
 
 ## 4. Artefactos y URLs

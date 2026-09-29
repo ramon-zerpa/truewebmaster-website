@@ -41,4 +41,6 @@ Environment names are in `.env.example`. `npm run release:check` deliberately fa
 
 Hero art direction, tunable parameters and renderer safeguards are documented in [docs/hero-animation.md](docs/hero-animation.md). `node scripts/hero-flow-check.mjs` checks the effect and forced fallback paths. Regenerate its static poster with `node scripts/prepare-hero-poster.mjs` using Node 24 after changing the preset.
 
+The five hero stages use a coordinated active sequence documented in [docs/hero-cards.md](docs/hero-cards.md). `node scripts/hero-journey-check.mjs` covers autoplay order, pointer/focus priority, touch, pause and reduced motion. All other journeys remain static.
+
 `scripts/prepare-assets.mjs` copies the immutable logo, self-hosts licensed Outfit 700 and DM Sans, and creates WebP crops and desktop preview excerpts. Provenance is in `docs/asset-provenance.json`. Only `public/` and built assets ship. `pencil-design/` and the temporary browser profile do not ship; the profile is excluded from Git.

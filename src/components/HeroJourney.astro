@@ -1,0 +1,251 @@
+---
+import { journey, local } from "../lib/content";
+import { text, type Locale } from "../lib/routes";
+import { heroJourneyConfig as c } from "../lib/hero-journey/config";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const vars = `--stage-transition:${c.transitionMs}ms;--stage-contrast:${c.activeContrast};--sibling-opacity:${c.siblingOpacity};--stage-glow:${c.glowIntensity};--stage-border:${c.borderEmphasis};--stage-scale:${c.activeScale};--stage-pulse:${c.pulseMs}ms;--spotlight:${c.spotlightIntensity}`;
+---
+
+<div
+  class="journey-wrap hero-journey"
+  data-hero-journey
+  data-journey-config={JSON.stringify(c)}
+  style={vars}
+>
+  <h2 class="sr-only">
+    {text(
+      locale,
+      "The connected customer journey",
+      "El recorrido conectado del cliente",
+    )}
+  </h2>
+  <div class="journey-caption">
+    <span>
+      {text(locale, "One connected journey", "Un recorrido conectado")}
+    </span>
+    <div class="caption-actions">
+      <span>
+        {text(
+          locale,
+          "Operated, not just built",
+          "Administrado, no solo construido",
+        )}
+      </span>
+      <button
+        type="button"
+        class="sequence-toggle"
+        data-sequence-toggle
+        hidden
+        aria-pressed="false"
+        data-pause={text(locale, "Pause sequence", "Pausar secuencia")}
+        data-play={text(locale, "Play sequence", "Activar secuencia")}
+      >
+        {text(locale, "Pause sequence", "Pausar secuencia")}
+      </button>
+    </div>
+  </div>
+  <div class="stage-group">
+    <div class="handoff-rail" aria-hidden="true">
+      <span></span>
+    </div>
+    <ol class="journey">
+      {journey.map((stage, index) => (
+        <li
+          class:list={["flow-card", { "signal-stage": index === 2 }]}
+          data-stage={index}
+        >
+          <span class="stage-index">{String(index + 1).padStart(2, "0")}</span>
+          <h3>{local(stage.hero, locale)}</h3>
+          <p>{local(stage.detail, locale)}</p>
+          <button
+            class="stage-control"
+            type="button"
+            hidden
+            data-stage-control
+            aria-pressed="false"
+            aria-label={text(
+              locale,
+              `Highlight stage ${index + 1}: ${local(stage.hero, locale)}`,
+              `Destacar etapa ${index + 1}: ${local(stage.hero, locale)}`,
+            )}
+          ></button>
+        </li>
+      ))}
+    </ol>
+  </div>
+</div>
+<style>
+  .hero-journey {
+    --active-step: 0;
+  }
+  .caption-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .sequence-toggle {
+    background: transparent;
+    border: 1px solid #608b9d;
+    color: #d3e8ee;
+    min-height: 44px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    font-size: 0.6875rem;
+    text-transform: none;
+    white-space: nowrap;
+  }
+  .sequence-toggle:hover {
+    background: #1a3443;
+  }
+  .stage-group {
+    position: relative;
+  }
+  .hero-journey[data-enhanced] .flow-card {
+    border: 1px solid #456173;
+    opacity: var(--sibling-opacity);
+    transition:
+      background-color var(--stage-transition) ease,
+      color var(--stage-transition) ease,
+      opacity var(--stage-transition) ease,
+      border-color var(--stage-transition) ease,
+      transform 0.25s ease-out;
+    transform: perspective(700px) rotateX(var(--tilt-x, 0deg))
+      rotateY(var(--tilt-y, 0deg));
+    overflow: visible;
+    isolation: isolate;
+  }
+  .hero-journey[data-enhanced] .flow-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(
+      ellipse at var(--spot-x, 50%) var(--spot-y, 45%),
+      rgba(23, 162, 184, var(--spotlight)),
+      transparent 72%
+    );
+    transition: opacity 0.4s ease;
+  }
+  .hero-journey[data-enhanced] .flow-card[data-active] {
+    background: var(--depth);
+    color: #fff;
+    opacity: 1;
+    border-color: rgba(211, 232, 238, var(--stage-border));
+    box-shadow: 0 5px 16px rgba(23, 162, 184, var(--stage-glow));
+    filter: contrast(var(--stage-contrast));
+  }
+  .hero-journey[data-enhanced] .flow-card[data-active]::before {
+    opacity: 1;
+  }
+  .hero-journey[data-enhanced] .flow-card[data-active] .stage-index,
+  .hero-journey[data-enhanced] .flow-card[data-active] p {
+    color: #e0eff2;
+  }
+  .stage-control {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: inherit;
+    background: transparent;
+  }
+  .stage-control:focus-visible {
+    outline: 3px solid #e8f5f7;
+    outline-offset: 4px;
+  }
+  .handoff-rail {
+    display: none;
+  }
+  .hero-journey[data-enhanced] .handoff-rail {
+    display: block;
+    position: absolute;
+    top: -13px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #345462;
+  }
+  .handoff-rail span {
+    display: block;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      #17a2b8,
+      #b8d9dd,
+      transparent
+    );
+    transform: translateX(calc(var(--active-step) * 100%));
+    transition: transform var(--stage-transition) cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .hero-journey[data-running] .handoff-rail span {
+    animation: handoff-breathe var(--stage-pulse) ease-in-out infinite alternate;
+  }
+  @keyframes handoff-breathe {
+    from {
+      opacity: 0.55;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hero-journey[data-enhanced] .flow-card[data-active] {
+      transform: perspective(700px) rotateX(var(--tilt-x, 0deg))
+        rotateY(var(--tilt-y, 0deg)) scale(var(--stage-scale));
+    }
+  }
+  @media (max-width: 767px) {
+    .caption-actions {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+    }
+    .journey-caption {
+      align-items: center;
+      gap: 14px;
+    }
+    .sequence-toggle {
+      font-size: 0.625rem;
+      padding: 6px 8px;
+    }
+    .hero-journey[data-enhanced] .handoff-rail {
+      top: 0;
+      bottom: 0;
+      right: auto;
+      left: -9px;
+      width: 2px;
+      height: auto;
+    }
+    .handoff-rail span {
+      width: 100%;
+      height: var(--flow-height, 80px);
+      transform: translateY(var(--flow-top, 0px));
+      background: linear-gradient(transparent, #17a2b8, #b8d9dd, transparent);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .flow-card {
+      transform: none !important;
+      filter: none !important;
+    }
+    .handoff-rail span {
+      animation: none !important;
+      transition: none;
+    }
+  }
+</style>
+<script>
+  import { mountHeroJourney } from "../lib/hero-journey/controller";
+  document
+    .querySelectorAll<HTMLElement>("[data-hero-journey]")
+    .forEach(mountHeroJourney);
+</script>
