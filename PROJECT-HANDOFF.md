@@ -3,7 +3,7 @@
 **Estado al 30 de septiembre de 2026:** Fases 01–05 completas y aprobadas. El propietario autorizó implementar el primer preview bilingüe de Astro y trasladar el hosting a Cloudflare Pages. Ya existen 22 rutas EN/ES y una página 404. La dirección aprobada de Pencil se conserva. Consultar `docs/implementation-status.md` para las decisiones posteriores y las dependencias de release.
 
 - Preview actual: https://truewebmaster-website.pages.dev/ y https://truewebmaster-website.pages.dev/es/.
-- Repositorio privado: https://github.com/ramon-zerpa/truewebmaster-website.
+- Repositorio privado definitivo: https://github.com/True-Webmaster/truewebmaster-site, rama `main`. El anterior `ramon-zerpa/truewebmaster-website` se conserva como snapshot histórico; no continuar trabajo allí. Ver `docs/repository-migration.md`.
 - Cloudflare Pages `truewebmaster-website`, conectado a GitHub `main`, es el destino de despliegue desde el 30/09/2026. Vercel queda retirado del flujo. Configuración y procedimiento en `docs/cloudflare-pages.md`. El dominio legacy sigue sin cambios; esta transición de hosting no activa la integración comercial ni el lanzamiento final.
 - Contacto y calendario de HighLevel todavía no existen: interfaz preparada, sin envío ni reservas simuladas.
 - Permiso de clientes para publicar nombres y capturas confirmado. Palm enlaza al dominio final por instrucción del propietario, aunque el nuevo sitio todavía no está allí.

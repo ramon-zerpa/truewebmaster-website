@@ -1,5 +1,7 @@
 # True Webmaster project instructions
 
+The definitive working repository is `https://github.com/True-Webmaster/truewebmaster-site`, branch `main`. The former `ramon-zerpa/truewebmaster-website` repository is retained as a historical migration snapshot. Use `origin` for the new repository; `legacy` identifies the former remote. See `docs/repository-migration.md` for migration status and verify the new Cloudflare Pages connection before claiming deployment from the new repository.
+
 Read the SDD documents in order before planning, designing, or implementing: `truewebmaster-sdd-fase-01-contexto-y-direccion.md`, `truewebmaster-sdd-fase-02-product-requirements.md`, `truewebmaster-sdd-fase-03-experience-plan-y-narrative-architecture.md`, and `truewebmaster-sdd-fase-04-direccion-de-experiencia-y-brief-para-pencil.md`. Then read `PROJECT-HANDOFF.md` for the approved Pencil outcome, current dependencies, and next step. Preserve approved decisions and incorporate later user corrections.
 
 Use the globally installed `astro-frontend-master` skill to coordinate specialist skills. Keep one primary owner per area: `ui-ux-pro-max` for UX/UI direction, Pencil for concrete visual design after the SDD briefing, `perf-astro` for Astro performance guidance, and `seo` for deep SEO review. Use Impeccable, Web Design Guidelines, and Web Quality skills for the review roles defined in the master skill. Verify technical recommendations against current documentation and evidence before adopting them.

@@ -9,7 +9,8 @@ Decisión del propietario del 30/09/2026: usar Cloudflare Pages desde ahora y re
 - Dashboard: https://dash.cloudflare.com/e647ec8fc06db97c1deb3d61c290ab38/pages/view/truewebmaster-website.
 - EN: https://truewebmaster-website.pages.dev/.
 - ES: https://truewebmaster-website.pages.dev/es/.
-- GitHub privado: `ramon-zerpa/truewebmaster-website`. Rama principal: `main`.
+- GitHub privado definitivo: `True-Webmaster/truewebmaster-site`. Rama principal: `main`.
+- Migración de repositorio del 30/09/2026: la conexión comprobada de este proyecto Pages aún apunta a `ramon-zerpa/truewebmaster-website`. El propietario indica que el repo nuevo tendrá Cloudflare conectado; falta identificar y verificar ese nuevo proyecto. No atribuir los deployments del proyecto anterior al repo nuevo. Ver `repository-migration.md`.
 - Push a `main` inicia el build/deploy de Pages; las demás ramas mantienen previews automáticos. Confirmar el commit y `latest_stage.status=success` mediante API/dashboard antes de declarar publicado. Comprobar después rutas y assets en el alias estable, no solo en la URL del deployment.
 
 ## Build verificado en la cuenta
