@@ -337,6 +337,14 @@ html {
 .hero h1 {
   max-width: 1080px;
 }
+@media (min-width: 768px) {
+  .hero .hero-message h1 {
+    font-size: clamp(1.9rem, 3.5vw, 3.1875rem);
+  }
+  :lang(es) .hero .hero-message h1 {
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+  }
+}
 .hero-support {
   max-width: 760px;
   color: #c6dce4;

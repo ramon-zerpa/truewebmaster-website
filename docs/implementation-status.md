@@ -49,4 +49,8 @@ Fecha: 29 de septiembre de 2026. Fase 05 revisada y aceptada; el propietario aut
 
 ## Pendientes para release
 
+### Última actualización del hero
+
+El propietario solicitó publicar inmediatamente el nuevo H1 “Your next customer is already looking. Make sure your business is ready to respond.” y el párrafo “We build and manage the digital journey behind your business — connecting your website, search presence, conversations, and follow-up into one system that keeps opportunities moving.” Se adaptó ES y se ajustó únicamente el tamaño responsive del H1 para conservar las dos frases en dos líneas desde 768 px. Validación: Astro check sin errores/advertencias/hints, 23 rutas y enlaces; EN/ES a 320, 390, 768, 1024 y 1440 px sin overflow. Publicación en el proyecto Vercel existente; migración final del dominio a Cloudflare sigue pendiente.
+
 Detalles de oferta y responsabilidades; equipo/historia de About; alcance de trabajo y evidencia para fichas profundas; privacidad y tratamiento de datos; recepciÃ³n y routing EN/ES; calendario real; decisiÃ³n sobre URLs legacy de tÃ©rminos, fulfillment, jobs y servicios; mapa de migraciÃ³n aprobado; validaciÃ³n de responsive y contenido por el propietario; pruebas end-to-end y aprobaciÃ³n de publicaciÃ³n final.
