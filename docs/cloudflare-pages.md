@@ -34,7 +34,16 @@ Decisión del propietario del 30/09/2026: usar Cloudflare Pages desde ahora y re
 
 Las páginas siguen con `meta robots noindex` mientras `PUBLIC_RELEASE_READY=false`. Canonical/hreflang conservan el dominio final aprobado. No conectar dominio legacy, cambiar DNS ni habilitar indexación como parte de esta transición: siguen pendientes la aprobación final, la conversión HighLevel, privacidad y mapa de migración. `scripts/release-check.mjs` conserva ese gate.
 
-`vercel.json` queda como protección de retirada: `git.deploymentEnabled=false` evita nuevos despliegues automáticos en Vercel. No usar `vercel deploy` para este proyecto. La desconexión del repositorio y el estado del antiguo proyecto se registran en el cierre de esta migración.
+`vercel.json` queda como protección de retirada: `git.deploymentEnabled=false` evita nuevos despliegues automáticos en Vercel. No usar `vercel deploy` para este proyecto. Se desconectó GitHub mediante `vercel git disconnect` y se pausó el antiguo proyecto Vercel después de verificar Pages. El proyecto antiguo se conserva recuperable; su alias ya no sirve el sitio. No reactivarlo para despliegues futuros.
+
+## Verificación de la transición — 30/09/2026
+
+- Primer build corregido: commit `369f388`, deployment `9cc49f56-f07f-49a5-ae81-53e39b35223d`, stage `deploy: success`, alias principal apuntando a esa versión. Las revisiones documentales posteriores también disparan deploy desde Git.
+- 23 documentos y 10 referencias de assets comprobados por HTTP en el alias estable: contenido/idioma correctos, seguridad, noindex y caché immutable de bundles con hash. Rutas inexistentes EN/ES y archivos de proyecto como `/AGENTS.md`, `/package.json` y `/docs/cloudflare-pages.md` devuelven 404. `/404.html` es la plantilla pública y responde 200 al solicitarla directamente; una URL inexistente responde 404 real.
+- 24 combinaciones responsive (Home, Solutions y Contact EN/ES; 320, 390, 768 y 1440 px) pasan sin overflow ni errores de ejecución. Las reglas automatizadas de accesibilidad examinadas, menú/Escape, menú sin JS, showcase y reduced motion pasan.
+- Evidencia local: `artifacts/cloudflare-http-report.json` y `artifacts/browser-report.json`, excluidos de Git. El navegador funcional recibe respuestas originales mediante transporte Node por la interferencia externa ya documentada; no se cambiaron preferencias del navegador. Esto no es una medición de latencia ni una aprobación de CWV de campo.
+
+Para repetir QA funcional en PowerShell: definir `$env:TEST_URL='https://truewebmaster-website.pages.dev'`, `$env:TEST_ISOLATE_TRANSPORT='true'` y ejecutar `node scripts/browser-check.mjs`. Mantener separada la futura medición de rendimiento en un navegador limpio.
 
 ## Fuentes técnicas
 

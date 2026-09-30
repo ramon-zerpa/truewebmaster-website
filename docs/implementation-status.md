@@ -6,7 +6,7 @@ Fecha: 29 de septiembre de 2026. Fase 05 revisada y aceptada; el propietario aut
 
 El propietario conectó el repo a Cloudflare Pages y autorizó usarlo desde ahora. Esta decisión sustituye las referencias históricas a Vercel y a una transición futura. Proyecto `truewebmaster-website` en la cuenta `e647ec8fc06db97c1deb3d61c290ab38`; preview EN/ES en `https://truewebmaster-website.pages.dev/` y `/es/`. Build `npm run validate`, output `dist`, Node `24.21.0`, rama `main`, previews Git activos. `public/_headers` conserva seguridad/noindex de preview y caché larga solo para assets con hash. `SITE_URL` conserva el dominio final y `PUBLIC_RELEASE_READY=false`; HighLevel y migración del dominio legacy siguen pendientes. Ver `docs/cloudflare-pages.md` para configuración y verificación.
 
-Se añadió `git.deploymentEnabled=false` para impedir despliegues Vercel. La retirada operativa de Vercel se registra tras verificar el nuevo deployment.
+Se añadió `git.deploymentEnabled=false` para impedir despliegues Vercel. Se verificó el primer deployment de Pages corregido (`369f388`, `9cc49f56-f07f-49a5-ae81-53e39b35223d`) con estado success y alias actualizado; GitHub fue desconectado del proyecto Vercel y este se pausó después de verificar Pages. Verificación HTTP: 23 documentos y 10 assets, headers/noindex/cache correctos, 404 real en URLs inexistentes y archivos privados del proyecto fuera de la publicación. QA funcional: 24 combinaciones responsive EN/ES pasan, sin overflow, errores ni infracciones de las reglas examinadas; menú, showcase y movimiento reducido pasan. Los informes están en `artifacts/`, excluidos de Git. No equivale a medición de rendimiento de red/CWV de campo.
 
 ## Decisiones confirmadas en este chat
 

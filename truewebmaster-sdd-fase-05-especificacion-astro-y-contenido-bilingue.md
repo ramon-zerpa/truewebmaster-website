@@ -482,6 +482,8 @@ Responsable y ventanas propuestas de revisión: inmediatamente, 48 horas y seman
 
 ## 13. Rendimiento, fuentes y presupuestos
 
+**Corrección posterior del propietario, 30/09/2026:** el hosting de construcción y despliegue pasa a Cloudflare Pages `truewebmaster-website`, conectado a GitHub `main`. Vercel queda desconectado y pausado. Configuración y evidencia en `docs/cloudflare-pages.md`; las menciones anteriores a decidir hosting o mantener Vercel son históricas. El dominio legacy, indexación y lanzamiento comercial siguen sujetos a la aprobación final.
+
 `perf-astro` es la guía primaria bajo `astro-frontend-master`; sus recetas de paquetes se contrastan con documentación y medición. No se incorporan automáticamente `astro-critters`, `@playform/compress`, carga de fuentes mediante hacks inline, librerías de movimiento ni preloads indiscriminados.
 
 **Propuesto F05:** CSS propio con alcance adecuado; HTML estático; sin React/Vue, carruseles, video de fondo o runtimes de animación por defecto. Movimiento por transform/opacity, sin layout por frame; scripts pausados fuera del viewport. El hero será principalmente texto y gráfico ligero. Identificar su LCP medido antes de priorizar recursos.
