@@ -345,6 +345,17 @@ html {
     font-size: clamp(1.75rem, 3vw, 2.75rem);
   }
 }
+.hero-headline-emphasis {
+  display: block;
+  margin-top: 0.15em;
+  font-size: clamp(2.625rem, 5.1vw, 4.5625rem);
+  line-height: 1.08;
+}
+@media (max-width: 767px) {
+  .hero-headline-emphasis {
+    font-size: clamp(2.625rem, 7.5vw, 3.5rem);
+  }
+}
 .hero-support {
   max-width: 760px;
   color: #c6dce4;

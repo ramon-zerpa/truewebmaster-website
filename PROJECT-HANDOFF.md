@@ -35,7 +35,8 @@ Trabajar en `C:\Users\raymo\Downloads\truewebmaster-website`. Leer `AGENTS.md`, 
 - **Proyectos en Home:** dos casos editoriales apilados, con una captura real grande junto a contexto breve. No mostrar etiquetas que sugieran servicios consumidos por el cliente como “Website + Search”. La captura recortada debe desplazarse al hacer hover en desktop, siguiendo como referencia la Home legacy. Pencil solo representa el estado inicial.
 
 - **H1 del hero:** estático EN/ES. Copy actual EN aprobado posteriormente: “Your next customer is already looking. Make sure your business is ready to respond.” El párrafo conecta website, search presence, conversations y follow-up. Dos frases en dos líneas desde 768 px y adaptación natural móvil. La animación de reveal fue rechazada y retirada el 29/09/2026. Ver `docs/hero-headline.md`.
-- **Continuidad:** esta sesión concluye con la reversión del H1, retirada de controles y actualización del repositorio. Esperar la siguiente solicitud del propietario; los briefs de animación anteriores no deben reintroducir estos elementos.
+- **Última corrección del hero:** segunda frase de mayor tamaño, en dos líneas desde 768 px; primera frase menor. Home EN usa exactamente el title “Websites, SEO & Automation in Tampa | True Webmaster” y description “True Webmaster builds and manages websites, SEO, CRM, follow-up, and automation systems for Tampa Bay service businesses.” ES adapta ambos metadatos. Esta corrección prevalece sobre la composición anterior de dos líneas totales.
+- **Continuidad:** esperar la siguiente solicitud del propietario; los briefs de animación anteriores no deben reintroducir reveal del H1 ni controles de pausa.
 
 ## 4. Artefactos y URLs
 

@@ -15,13 +15,13 @@ interface Props {
 const { locale } = Astro.props;
 const title = text(
   locale,
-  "Managed Digital Operations — True Webmaster",
-  "Operaciones digitales administradas — True Webmaster",
+  "Websites, SEO & Automation in Tampa | True Webmaster",
+  "Sitios web, SEO y automatización en Tampa | True Webmaster",
 );
 const description = text(
   locale,
-  "A connected approach to websites, SEO, CRM, and follow-up for service businesses. Based in Tampa, FL.",
-  "Sitios web, SEO, CRM y seguimiento como parte de una operación conectada para negocios de servicios. En Tampa, FL.",
+  "True Webmaster builds and manages websites, SEO, CRM, follow-up, and automation systems for Tampa Bay service businesses.",
+  "True Webmaster construye y administra sitios web, SEO, CRM, seguimiento y sistemas de automatización para negocios de servicios de Tampa Bay.",
 );
 const gaps = [
   [
@@ -99,12 +99,19 @@ const pillars = [
             "Your next customer is already looking.",
             "Tu próximo cliente ya está buscando.",
           )}{" "}
-          <br />
-          {text(
-            locale,
-            "Make sure your business is ready to respond.",
-            "Asegúrate de que tu negocio esté listo para responder.",
-          )}
+          <span class="hero-headline-emphasis">
+            {text(
+              locale,
+              "Make sure your business",
+              "Asegúrate de que tu negocio",
+            )}{" "}
+            <br />
+            {text(
+              locale,
+              "is ready to respond.",
+              "esté listo para responder.",
+            )}
+          </span>
         </h1>
         <p class="hero-support">
           {text(
