@@ -2,6 +2,12 @@
 
 Fecha: 29 de septiembre de 2026. Fase 05 revisada y aceptada; el propietario autorizÃ³ continuar con implementaciÃ³n y preguntas durante el trabajo.
 
+## Hosting actual — 30 de septiembre de 2026
+
+El propietario conectó el repo a Cloudflare Pages y autorizó usarlo desde ahora. Esta decisión sustituye las referencias históricas a Vercel y a una transición futura. Proyecto `truewebmaster-website` en la cuenta `e647ec8fc06db97c1deb3d61c290ab38`; preview EN/ES en `https://truewebmaster-website.pages.dev/` y `/es/`. Build `npm run validate`, output `dist`, Node `24.21.0`, rama `main`, previews Git activos. `public/_headers` conserva seguridad/noindex de preview y caché larga solo para assets con hash. `SITE_URL` conserva el dominio final y `PUBLIC_RELEASE_READY=false`; HighLevel y migración del dominio legacy siguen pendientes. Ver `docs/cloudflare-pages.md` para configuración y verificación.
+
+Se añadió `git.deploymentEnabled=false` para impedir despliegues Vercel. La retirada operativa de Vercel se registra tras verificar el nuevo deployment.
+
 ## Decisiones confirmadas en este chat
 
 - Legacy y dominio de continuidad: https://www.truewebmaster.com/.

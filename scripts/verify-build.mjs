@@ -19,6 +19,19 @@ const walk = async (dir) =>
 const files = await walk(root);
 const pages = files.filter((f) => f.endsWith(".html"));
 const issues = [];
+const headers = await fs.readFile(path.join(root, "_headers"), "utf8");
+for (const expected of [
+  "X-Content-Type-Options: nosniff",
+  "Referrer-Policy: strict-origin-when-cross-origin",
+  "Permissions-Policy: camera=(), microphone=(), geolocation=()",
+  "https://:project.pages.dev/*",
+  "https://:version.:project.pages.dev/*",
+  "X-Robots-Tag: noindex, nofollow",
+  "/_astro/*",
+  "Cache-Control: public, max-age=31536000, immutable",
+]) {
+  if (!headers.includes(expected)) issues.push(`_headers: missing ${expected}`);
+}
 for (const file of pages) {
   const html = await fs.readFile(file, "utf8");
   const name = path.relative(root, file);
